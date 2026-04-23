@@ -31,42 +31,40 @@
             <!-- Conteúdo área verde -->
             <div class="auth-hero-content">
                 <h1 class="auth-hero-title">
-                    Crie sua conta<br>
-                    e comece a<br>
-                    cuidar de você
+                    Crie sua conta e comece a cuidar de você
                 </h1>
                 <p class="auth-hero-subtitle">
-                    Em menos de 2 minutos você configura sua conta e<br>
-                    já começa a ganhar recompensas.
+                    Em menos de 2 minutos você configura sua conta e já começa a ganhar recompensas.
                 </p>
 
+                <!-- Passos no painel esquerdo -->
                 <ul class="auth-hero-features auth-steps">
-                    <li class="active">
+                    <li class="auth-step-item active" id="hero-step-1">
                         <div class="auth-feature-icon">
                             <i class="fa-solid fa-id-card"></i>
                         </div>
-                        <span>
-                            <small>PASSO 01</small><br>
-                            Preencha seus dados pessoais
-                        </span>
+                        <div class="auth-step-text">
+                            <small>PASSO 01</small>
+                            <span>Preencha seus dados pessoais</span>
+                        </div>
                     </li>
-                    <li>
+                    <li class="auth-step-item" id="hero-step-2">
                         <div class="auth-feature-icon">
                             <i class="fa-solid fa-lock"></i>
                         </div>
-                        <span>
-                            <small>PASSO 02</small><br>
-                            Configure seu acesso seguro
-                        </span>
+                        <div class="auth-step-text">
+                            <small>PASSO 02</small>
+                            <span>Configure seu acesso seguro</span>
+                        </div>
                     </li>
-                    <li>
+                    <li class="auth-step-item" id="hero-step-3">
                         <div class="auth-feature-icon">
                             <i class="fa-solid fa-file-signature"></i>
                         </div>
-                        <span>
-                            <small>PASSO 03</small><br>
-                            Aceite os termos e comece
-                        </span>
+                        <div class="auth-step-text">
+                            <small>PASSO 03</small>
+                            <span>Aceite os termos e comece</span>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -79,65 +77,330 @@
         <main class="auth-form-panel">
             <div class="auth-form-wrapper">
 
+                <!-- Cabeçalho dinâmico -->
                 <div class="auth-form-header">
                     <h2 class="auth-form-title">Criar conta</h2>
-                    <p class="auth-form-subtitle">Passo 1 de 3 — Dados pessoais</p>
+                    <p class="auth-form-subtitle" id="step-subtitle">Passo 1 de 3 — Dados pessoais</p>
                 </div>
                 <!-- Barra de progresso -->
                 <div class="auth-progress">
-                    <div class="auth-progress-bar active"></div>
-                    <div class="auth-progress-bar"></div>
-                    <div class="auth-progress-bar"></div>
+                    <div class="auth-progress-bar active" id="progress-1"></div>
+                    <div class="auth-progress-bar" id="progress-2"></div>
+                    <div class="auth-progress-bar" id="progress-3"></div>
                 </div>
-                <form class="auth-form" novalidate>
-                    <!-- Nome completo -->
+
+                <!-- PASSO 1 - Dados pessoais -->
+                <div class="cadastro-step active" id="step-1">
+                    <!-- Input de nome -->
                     <div class="input-group">
                         <label class="input-label" for="cadastro-nome">Nome completo</label>
                         <div class="input-icon-wrapper">
                             <i class="fa-solid fa-user input-icon"></i>
                             <input type="text" id="cadastro-nome" class="input-field input-with-icon"
-                                placeholder="Seu nome completo" autocomplete="name" required />
+                                placeholder="Seu nome completo" autocomplete="name" />
                         </div>
                     </div>
-                    <!-- E-mail -->
+                    <!-- Input de e-mail -->
                     <div class="input-group">
                         <label class="input-label" for="cadastro-email">E-mail</label>
                         <div class="input-icon-wrapper">
                             <i class="fa-regular fa-envelope input-icon"></i>
                             <input type="email" id="cadastro-email" class="input-field input-with-icon"
-                                placeholder="seu@email.com.br" autocomplete="email" required />
+                                placeholder="seu@email.com.br" autocomplete="email" />
                         </div>
                     </div>
-                    <!-- Código do usuário -->
-                    <div class="input-group">
-                        <label class="input-label" for="cadastro-codigo">Código do usuário</label>
-                        <div class="input-icon-wrapper">
-                            <i class="fa-solid fa-hashtag input-icon"></i>
-                            <input type="text" id="cadastro-codigo" class="input-field input-with-icon"
-                                placeholder="Ex: WC-123456" required />
-                        </div>
-                        <small class="text-muted text-sm">
-                            Esse código pode ser fornecido pela empresa ou gerado no cadastro.
-                        </small>
-                    </div>
-                    <!-- Botão continuar -->
-                    <button type="submit" class="btn btn-primary btn-block btn-lg auth-submit-btn">
+
+                    <button type="button" class="btn btn-primary btn-block btn-lg auth-submit-btn" id="btn-step-1">
                         Continuar
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
-                    <!-- Link login -->
+
                     <div class="auth-footer-text">
                         <p>Já tem conta?</p>
                         <a href="login.html" class="auth-link auth-link-bold">
-                            Entrar
-                            <i class="fa-solid fa-arrow-right"></i>
+                            Entrar <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
-                </form>
+
+                </div>
+
+                <!-- PASSO 2 - Acesso seguro -->
+                <div class="cadastro-step" id="step-2">
+
+                    <!-- Input de senha -->
+                    <div class="input-group">
+                        <label class="input-label" for="cadastro-senha">Senha</label>
+                        <div class="input-icon-wrapper">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" id="cadastro-senha"
+                                class="input-field input-with-icon input-with-icon-right"
+                                placeholder="Mínimo 8 caracteres" autocomplete="new-password" />
+                            <button type="button" class="input-toggle-password" aria-label="Mostrar senha">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+
+                        <!-- Indicador de força da senha -->
+                        <div class="password-strength">
+                            <div class="password-strength-bars">
+                                <div class="strength-bar" id="bar-1"></div>
+                                <div class="strength-bar" id="bar-2"></div>
+                                <div class="strength-bar" id="bar-3"></div>
+                            </div>
+                            <span class="password-strength-label" id="strength-label"></span>
+                        </div>
+
+                        <!-- Critérios da senha -->
+                        <div class="password-criteria">
+                            <span class="criteria-item" id="criteria-length">
+                                <i class="fa-regular fa-circle-check"></i> Mínimo 8 caracteres
+                            </span>
+                            <span class="criteria-item" id="criteria-upper">
+                                <i class="fa-regular fa-circle-check"></i> Letra maiúscula
+                            </span>
+                            <span class="criteria-item" id="criteria-number">
+                                <i class="fa-regular fa-circle-check"></i> Número
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Input de confirmação de senha -->
+                    <div class="input-group">
+                        <label class="input-label" for="cadastro-confirma-senha">Confirmar senha</label>
+                        <div class="input-icon-wrapper">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" id="cadastro-confirma-senha"
+                                class="input-field input-with-icon input-with-icon-right"
+                                placeholder="Repita a senha" autocomplete="new-password" />
+                            <button type="button" class="input-toggle-password" aria-label="Mostrar senha">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="password-match-msg" id="match-msg"></span>
+                    </div>
+
+                    <div class="auth-btn-row">
+                        <button type="button" class="btn btn-ghost auth-back-btn" id="btn-back-1">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-lg auth-submit-btn auth-submit-flex"
+                            id="btn-step-2">
+                            Continuar
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="auth-footer-text">
+                        <p>Já tem conta?</p>
+                        <a href="login.html" class="auth-link auth-link-bold">
+                            Entrar <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- PASSO 3 - Confirmação e LGPD -->
+                <div class="cadastro-step" id="step-3">
+
+                    <!-- Resumo dos dados -->
+                    <div class="cadastro-resumo">
+                        <h4 class="cadastro-resumo-title">Resumo do cadastro</h4>
+                        <div class="resumo-row">
+                            <span class="resumo-label">Nome</span>
+                            <span class="resumo-value" id="resumo-nome">—</span>
+                        </div>
+                        <div class="resumo-row">
+                            <span class="resumo-label">E-mail</span>
+                            <span class="resumo-value" id="resumo-email">—</span>
+                        </div>
+                    </div>
+
+                    <!-- Aviso LGPD -->
+                    <div class="cadastro-lgpd">
+                        <div class="lgpd-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="lgpd-text">
+                            <strong>Proteção de Dados (LGPD)</strong>
+                            <p>Seus dados serão usados exclusivamente para personalizar sua experiência no WayCare.
+                                Não compartilhamos informações pessoais com terceiros sem sua autorização.</p>
+                        </div>
+                    </div>
+
+                    <!-- Checkbox de aceite -->
+                    <label class="checkbox-group">
+                        <input type="checkbox" id="aceite-termos" />
+                        <span class="text-sm">
+                            Concordo com a <a href="#" class="auth-link">Política de Privacidade</a>
+                            e os <a href="#" class="auth-link">Termos de Uso</a>
+                            do WayCare e autorizo o tratamento dos meus dados pessoais conforme descrito.
+                        </span>
+                    </label>
+
+                    <div class="auth-btn-row">
+                        <button type="button" class="btn btn-ghost auth-back-btn" id="btn-back-2">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-lg auth-submit-btn auth-submit-flex"
+                            id="btn-criar-conta" disabled>
+                            Criar conta
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="auth-footer-text">
+                        <p>Já tem conta?</p>
+                        <a href="login.html" class="auth-link auth-link-bold">
+                            Entrar <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Subtítulos de cada passo
+        const subtitles = [
+            'Passo 1 de 3 — Dados pessoais',
+            'Passo 2 de 3 — Acesso',
+            'Passo 3 de 3 — Confirmação'
+        ];
+
+        // Navega entre os passos
+        function irParaPasso(de, para) {
+            document.getElementById(`step-${de}`).classList.remove('active');
+            document.getElementById(`step-${para}`).classList.add('active');
+
+            document.getElementById('step-subtitle').textContent = subtitles[para - 1];
+
+            // Atualiza as barras de progresso
+            for (let i = 1; i <= 3; i++) {
+                const bar = document.getElementById(`progress-${i}`);
+                i <= para ? bar.classList.add('active') : bar.classList.remove('active');
+            }
+
+            // Atualiza os passos no painel esquerdo
+            for (let i = 1; i <= 3; i++) {
+                const heroStep = document.getElementById(`hero-step-${i}`);
+                i <= para ? heroStep.classList.add('active') : heroStep.classList.remove('active');
+            }
+        }
+
+        // Passo 1 -> 2
+        document.getElementById('btn-step-1').addEventListener('click', () => {
+            const nome = document.getElementById('cadastro-nome').value.trim();
+            const email = document.getElementById('cadastro-email').value.trim();
+            if (!nome || !email) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+            irParaPasso(1, 2);
+        });
+
+        // Passo 2 -> 3
+        document.getElementById('btn-step-2').addEventListener('click', () => {
+            const senha = document.getElementById('cadastro-senha').value;
+            const confirma = document.getElementById('cadastro-confirma-senha').value;
+            if (senha.length < 8) {
+                alert('A senha deve ter no mínimo 8 caracteres.');
+                return;
+            }
+            if (senha !== confirma) {
+                alert('As senhas não coincidem.');
+                return;
+            }
+
+            // Preenche o resumo com os dados do passo 1
+            document.getElementById('resumo-nome').textContent =
+                document.getElementById('cadastro-nome').value.trim();
+            document.getElementById('resumo-email').textContent =
+                document.getElementById('cadastro-email').value.trim();
+
+            irParaPasso(2, 3);
+        });
+
+        // Voltar: passo 2 -> 1
+        document.getElementById('btn-back-1').addEventListener('click', () => {
+            irParaPasso(2, 1);
+        });
+
+        // Voltar: passo 3 -> 2
+        document.getElementById('btn-back-2').addEventListener('click', () => {
+            irParaPasso(3, 2);
+        });
+
+        // Toggle visibilidade das senhas
+        document.querySelectorAll('.input-toggle-password').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const input = btn.closest('.input-icon-wrapper').querySelector('input');
+                const icon = btn.querySelector('i');
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.replace('fa-eye', 'fa-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.replace('fa-eye-slash', 'fa-eye');
+                }
+            });
+        });
+
+        // Indicador de força da senha
+        document.getElementById('cadastro-senha').addEventListener('input', function () {
+            const val = this.value;
+            const temTamanho = val.length >= 8;
+            const temMaiuscula = /[A-Z]/.test(val);
+            const temNumero = /[0-9]/.test(val);
+
+            atualizarCriteria('criteria-length', temTamanho);
+            atualizarCriteria('criteria-upper', temMaiuscula);
+            atualizarCriteria('criteria-number', temNumero);
+
+            const pontos = [temTamanho, temMaiuscula, temNumero].filter(Boolean).length;
+            const labels = ['', 'Fraca', 'Média', 'Forte'];
+            const classes = ['', 'weak', 'medium', 'strong'];
+
+            document.getElementById('strength-label').textContent = pontos > 0 ? labels[pontos] : '';
+
+            for (let i = 1; i <= 3; i++) {
+                const bar = document.getElementById(`bar-${i}`);
+                bar.className = 'strength-bar';
+                if (i <= pontos) bar.classList.add(classes[pontos]);
+            }
+        });
+
+        function atualizarCriteria(id, valido) {
+            const el = document.getElementById(id);
+            const icon = el.querySelector('i');
+            if (valido) {
+                el.classList.add('valid');
+                icon.className = 'fa-solid fa-circle-check';
+            } else {
+                el.classList.remove('valid');
+                icon.className = 'fa-regular fa-circle-check';
+            }
+        }
+
+        // Verificar se senhas coincidem
+        document.getElementById('cadastro-confirma-senha').addEventListener('input', function () {
+            const senha = document.getElementById('cadastro-senha').value;
+            const msg = document.getElementById('match-msg');
+            if (this.value && this.value === senha) {
+                msg.textContent = '✓ Senhas coincidem';
+                msg.className = 'password-match-msg match-ok';
+            } else if (this.value) {
+                msg.textContent = '✗ Senhas não coincidem';
+                msg.className = 'password-match-msg match-error';
+            } else {
+                msg.textContent = '';
+            }
+        });
+
+        // Habilita botão criar conta só com checkbox marcado
+        document.getElementById('aceite-termos').addEventListener('change', function () {
+            document.getElementById('btn-criar-conta').disabled = !this.checked;
+        });
+    </script>
 </body>
 </html>
