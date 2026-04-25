@@ -1,7 +1,7 @@
 /* WAYCARE — Global CSS
    Design System: variáveis, reset, tipografia e componentes */
 
-/* 1. VARIÁVEIS (Design System) */
+/* VARIÁVEIS (Design System) */
 :root {
   /* Cores principais */
   --color-primary: #1c9770;
@@ -303,14 +303,28 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
   transition: all var(--transition-normal);
 }
 
+.card-mission:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
 .card-mission.in-progress {
   border-color: var(--color-warning);
   background-color: #fffbf2;
 }
 
+.card-mission.in-progress:hover {
+  border-color: var(--color-primary);
+}
+
 .card-mission.completed {
   border-color: var(--color-accent-1);
   background-color: var(--color-primary-light);
+}
+
+.card-mission.completed:hover {
+  border-color: var(--color-primary);
 }
 
 /* Badges - Tags */
