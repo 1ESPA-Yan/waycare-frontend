@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +8,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="../css/global.css" />
@@ -64,7 +68,13 @@
 
     <main class="main-content" id="main-content">
       <header class="topbar">
-        <h1>Trilhas</h1>
+        <div class="flex flex-col gap-1">
+          <h1 class="trilhas-page-title">Trilhas de Bem-estar</h1>
+          <p class="trilhas-page-subtitle">
+            Recomendado para você: 😊
+            <a href="#" class="text-primary font-medium">Mindfulness &amp; Nutrição</a>
+          </p>
+        </div>
         <div class="topbar-actions">
           <div class="hc-chip">
             <span class="hc-icon"></span>
@@ -78,16 +88,326 @@
       </header>
 
       <section id="page-content">
-        <!-- Todo conteúdo do dashboard vai vir aqui -->
+
+        <!-- Cards de resumo -->
+        <div class="trilhas-resumo">
+          <div class="card resumo-card">
+            <div class="resumo-icon resumo-icon--primary">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="resumo-valor">2</span>
+              <span class="resumo-label">Trilhas Ativas</span>
+            </div>
+          </div>
+          <div class="card resumo-card">
+            <div class="resumo-icon resumo-icon--success">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="resumo-valor">3</span>
+              <span class="resumo-label">Missões Concluídas</span>
+            </div>
+          </div>
+          <div class="card resumo-card">
+            <div class="resumo-icon resumo-icon--warning">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="resumo-valor text-warning">5 dias</span>
+              <span class="resumo-label">Sequência</span>
+            </div>
+          </div>
+          <div class="card resumo-card">
+            <div class="resumo-icon resumo-icon--hc">
+              <i class="fa-solid fa-coins"></i>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="resumo-valor" style="color: var(--color-hc)">1300</span>
+              <span class="resumo-label">Health Coins</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Busca e filtros -->
+        <div class="trilhas-filtros">
+          <div class="trilhas-search">
+            <i class="fa-solid fa-magnifying-glass trilhas-search-icon"></i>
+            <input type="search" class="input-field trilhas-search-input" placeholder="Buscar trilhas..." />
+          </div>
+          <div class="trilhas-tags">
+            <button class="trilha-tag active">
+              <i class="fa-solid fa-circle-dot"></i> Todos
+            </button>
+            <button class="trilha-tag">
+              <i class="fa-solid fa-person-running"></i> Movimento
+            </button>
+            <button class="trilha-tag">
+              <i class="fa-solid fa-moon"></i> Sono
+            </button>
+            <button class="trilha-tag">
+              <i class="fa-solid fa-apple-whole"></i> Nutrição
+            </button>
+            <button class="trilha-tag">
+              <i class="fa-solid fa-brain"></i> Mindfulness
+            </button>
+            <button class="trilha-tag">
+              <i class="fa-solid fa-heart-pulse"></i> Saúde
+            </button>
+          </div>
+        </div>
+
+        <!-- Trilhas em andamento -->
+        <div class="trilhas-secao">
+          <div class="trilhas-secao-header">
+            <span class="trilhas-secao-barra trilhas-secao-barra--primary"></span>
+            <h2 class="trilhas-secao-titulo">Trilhas em Andamento</h2>
+            <span class="badge badge-primary">2 ativas</span>
+          </div>
+
+          <div class="grid-2">
+
+            <div class="card trilha-card">
+              <div class="trilha-card-top">
+                <span class="trilha-thumb">🌙</span>
+                <div class="flex flex-col gap-1">
+                  <div class="flex items-center gap-2">
+                    <h3 class="trilha-nome">Sono Profundo</h3>
+                    <span class="trilha-status-badge">● Em andamento</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="badge badge-primary">Fácil</span>
+                    <span class="text-xs text-muted">Nível 1 · 1.240 participantes</span>
+                  </div>
+                </div>
+              </div>
+              <p class="trilha-desc">Melhore a qualidade do seu sono com hábitos noturnos saudáveis e rotinas de
+                relaxamento comprovadas.</p>
+              <div class="trilha-tags-lista">
+                <span class="badge badge-muted">Relaxamento</span>
+                <span class="badge badge-muted">Rotina</span>
+                <span class="badge badge-muted">Descanso</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-secondary">Progresso da trilha</span>
+                <span class="text-sm font-bold text-primary">60%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%"></div>
+              </div>
+              <div class="trilha-card-footer">
+                <div class="flex items-center gap-4">
+                  <span class="trilha-meta-item"><i class="fa-regular fa-calendar"></i> 7 dias</span>
+                  <span class="trilha-meta-item"><i class="fa-regular fa-circle-check"></i> 5 missões</span>
+                </div>
+                <span class="mission-hc"><span class="hc-icon"></span> +350 HC</span>
+              </div>
+              <button class="btn trilha-btn-continuar">
+                <i class="fa-solid fa-play"></i> Continuar Trilha
+              </button>
+            </div>
+
+            <div class="card trilha-card trilha-card--blue">
+              <div class="trilha-card-top">
+                <span class="trilha-thumb">🏃</span>
+                <div class="flex flex-col gap-1">
+                  <div class="flex items-center gap-2">
+                    <h3 class="trilha-nome">Movimento Diário</h3>
+                    <span class="trilha-status-badge trilha-status-badge--blue">● Em andamento</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="badge badge-warning">Médio</span>
+                    <span class="text-xs text-muted">Nível 2 · 890 participantes</span>
+                  </div>
+                </div>
+              </div>
+              <p class="trilha-desc">Incorpore atividade física leve à sua rotina diária sem precisar ir à academia.</p>
+              <div class="trilha-tags-lista">
+                <span class="badge badge-muted">Passos</span>
+                <span class="badge badge-muted">Cardio</span>
+                <span class="badge badge-muted">Energia</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-secondary">Progresso da trilha</span>
+                <span class="text-sm font-bold trilha-pct--blue">25%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill trilha-fill--blue" style="width: 25%"></div>
+              </div>
+              <div class="trilha-card-footer">
+                <div class="flex items-center gap-4">
+                  <span class="trilha-meta-item"><i class="fa-regular fa-calendar"></i> 14 dias</span>
+                  <span class="trilha-meta-item"><i class="fa-regular fa-circle-check"></i> 8 missões</span>
+                </div>
+                <span class="mission-hc"><span class="hc-icon"></span> +620 HC</span>
+              </div>
+              <button class="btn trilha-btn-continuar trilha-btn-continuar--blue">
+                <i class="fa-solid fa-play"></i> Continuar Trilha
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Trilhas disponíveis -->
+        <div class="trilhas-secao">
+          <div class="trilhas-secao-header">
+            <span class="trilhas-secao-barra trilhas-secao-barra--warning"></span>
+            <h2 class="trilhas-secao-titulo">Trilhas Disponíveis</h2>
+            <span class="badge badge-warning">3 disponíveis</span>
+          </div>
+
+          <div class="grid-2">
+
+            <div class="card trilha-card trilha-card-recomendada">
+              <span class="trilha-recomendada-label">
+                <i class="fa-solid fa-star"></i> Recomendada para seu humor
+              </span>
+              <div class="trilha-card-top">
+                <span class="trilha-thumb">🧘</span>
+                <div class="flex flex-col gap-1">
+                  <h3 class="trilha-nome">Mente Tranquila</h3>
+                  <div class="flex items-center gap-2">
+                    <span class="badge badge-primary">Fácil</span>
+                    <span class="text-xs text-muted">Nível 1 · 2.100 participantes</span>
+                  </div>
+                </div>
+              </div>
+              <p class="trilha-desc">Reduza o estresse e a ansiedade com técnicas de mindfulness e respiração
+                consciente.</p>
+              <div class="trilha-tags-lista">
+                <span class="badge badge-muted">Respiração</span>
+                <span class="badge badge-muted">Foco</span>
+                <span class="badge badge-muted">Ansiedade</span>
+              </div>
+              <div class="trilha-card-footer">
+                <div class="flex items-center gap-4">
+                  <span class="trilha-meta-item"><i class="fa-regular fa-calendar"></i> 10 dias</span>
+                  <span class="trilha-meta-item"><i class="fa-regular fa-circle-check"></i> 6 missões</span>
+                </div>
+                <span class="mission-hc"><span class="hc-icon"></span> +420 HC</span>
+              </div>
+              <button class="btn trilha-btn-iniciar">+ Iniciar Trilha</button>
+            </div>
+
+            <div class="card trilha-card trilha-card-recomendada">
+              <span class="trilha-recomendada-label">
+                <i class="fa-solid fa-star"></i> Recomendada para seu humor
+              </span>
+              <div class="trilha-card-top">
+                <span class="trilha-thumb">🥗</span>
+                <div class="flex flex-col gap-1">
+                  <h3 class="trilha-nome">Alimentação Consciente</h3>
+                  <div class="flex items-center gap-2">
+                    <span class="badge badge-error">Difícil</span>
+                    <span class="text-xs text-muted">Nível 3 · 660 participantes</span>
+                  </div>
+                </div>
+              </div>
+              <p class="trilha-desc">Desenvolva uma relação saudável com a comida e melhore seus hábitos alimentares.
+              </p>
+              <div class="trilha-tags-lista">
+                <span class="badge badge-muted">Hidratação</span>
+                <span class="badge badge-muted">Proteína</span>
+                <span class="badge badge-muted">Vitaminas</span>
+              </div>
+              <div class="trilha-card-footer">
+                <div class="flex items-center gap-4">
+                  <span class="trilha-meta-item"><i class="fa-regular fa-calendar"></i> 21 dias</span>
+                  <span class="trilha-meta-item"><i class="fa-regular fa-circle-check"></i> 10 missões</span>
+                </div>
+                <span class="mission-hc"><span class="hc-icon"></span> +900 HC</span>
+              </div>
+              <button class="btn trilha-btn-iniciar">+ Iniciar Trilha</button>
+            </div>
+
+            <div class="card trilha-card trilha-card-checkup">
+              <div class="trilha-card-top">
+                <span class="trilha-thumb">📋</span>
+                <div class="flex flex-col gap-1">
+                  <h3 class="trilha-nome">Check-up Preventivo</h3>
+                  <div class="flex items-center gap-2">
+                    <span class="badge badge-warning">Médio</span>
+                    <span class="text-xs text-muted">Nível 2 · 440 participantes</span>
+                  </div>
+                </div>
+              </div>
+              <p class="trilha-desc">Cuide da sua saúde com consultas regulares e exames preventivos essenciais.</p>
+              <div class="trilha-tags-lista">
+                <span class="badge badge-muted">Consulta</span>
+                <span class="badge badge-muted">Exames</span>
+                <span class="badge badge-muted">Prevenção</span>
+              </div>
+              <div class="trilha-card-footer">
+                <div class="flex items-center gap-4">
+                  <span class="trilha-meta-item"><i class="fa-regular fa-calendar"></i> 30 dias</span>
+                  <span class="trilha-meta-item"><i class="fa-regular fa-circle-check"></i> 4 missões</span>
+                </div>
+                <span class="mission-hc"><span class="hc-icon"></span> +1200 HC</span>
+              </div>
+              <button class="btn trilha-btn-iniciar trilha-btn-iniciar--checkup">+ Iniciar Trilha</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Trilhas bloqueadas -->
+        <div class="trilhas-secao">
+          <div class="trilhas-secao-header">
+            <span class="trilhas-secao-barra trilhas-secao-barra--muted"></span>
+            <h2 class="trilhas-secao-titulo">Trilhas Bloqueadas</h2>
+            <span class="text-sm text-muted">Complete outras trilhas para desbloquear</span>
+          </div>
+
+          <div class="grid-2">
+
+            <div class="card trilha-card trilha-card-bloqueada">
+              <div class="trilha-card-top">
+                <span class="trilha-thumb trilha-thumb--locked">🚴</span>
+                <div class="flex flex-col gap-1">
+                  <div class="flex items-center gap-2">
+                    <h3 class="trilha-nome text-muted">Cardio Intenso</h3>
+                    <i class="fa-solid fa-lock text-muted text-sm"></i>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="badge badge-error">Difícil</span>
+                    <span class="text-xs text-muted">Nível 4 · 280 participantes</span>
+                  </div>
+                </div>
+              </div>
+              <p class="trilha-desc text-muted">Eleve seu condicionamento físico com atividades cardiovasculares
+                progressivas.</p>
+              <div class="trilha-tags-lista">
+                <span class="badge badge-muted">Resistência</span>
+                <span class="badge badge-muted">Força</span>
+                <span class="badge badge-muted">Velocidade</span>
+              </div>
+              <div class="trilha-card-footer">
+                <div class="flex items-center gap-4">
+                  <span class="trilha-meta-item text-muted"><i class="fa-regular fa-calendar"></i> 21 dias</span>
+                  <span class="trilha-meta-item text-muted"><i class="fa-regular fa-circle-check"></i> 12 missões</span>
+                </div>
+                <span class="mission-hc"><span class="hc-icon"></span> +1100 HC</span>
+              </div>
+              <button class="btn trilha-btn-bloqueada" disabled>
+                <i class="fa-solid fa-lock"></i> Bloqueada
+              </button>
+            </div>
+
+          </div>
+        </div>
+
       </section>
     </main>
 
   </div>
 
+  <!-- Botão flutuante inferior -->
   <button class="fab" aria-label="Ações rápidas">
     <i class="fa-solid fa-plus"></i>
   </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
