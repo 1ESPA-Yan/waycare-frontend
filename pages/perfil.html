@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WayCare — Trilhas</title>
+  <title>WayCare — Meu Perfil</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="../css/global.css" />
-  <link rel="stylesheet" href="../css/trilhas.css" />
+  <link rel="stylesheet" href="../css/perfil.css" />
 </head>
 
 <body>
@@ -64,10 +67,13 @@
 
     <main class="main-content" id="main-content">
       <header class="topbar">
-        <h1>Meu Perfil</h1>
+        <a href="dashboard.html" class="perfil-voltar">
+          <i class="fa-solid fa-arrow-left"></i>
+          Voltar
+        </a>
         <div class="topbar-actions">
           <div class="hc-chip">
-            <span class="hc-icon"></span>
+            <span class="fa-solid fa-coins"></span>
             1300 HC
           </div>
           <button class="notif-btn" aria-label="Notificações">
@@ -78,10 +84,216 @@
       </header>
 
       <section id="page-content">
-        <!-- Todo conteúdo do perfil vai vir aqui -->
+        <!-- Título da página -->
+        <div class="d-flex align-items-center gap-3 mb-5">
+          <div class="perfil-titulo-icon">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <h1 class="perfil-titulo">Meu Perfil</h1>
+        </div>
+
+        <div class="row g-4">
+          <!-- Coluna esquerda -->
+          <div class="col-12 col-lg-8 d-flex flex-column gap-4">
+
+            <!-- Card principal do perfil -->
+            <div class="card perfil-card-principal">
+              <div class="d-flex align-items-start gap-4 mb-4">
+                <div class="avatar avatar-lg perfil-avatar">J</div>
+                <div class="d-flex flex-column gap-2 flex-grow-1">
+                  <div class="d-flex align-items-center gap-2">
+                    <h2 class="perfil-nome">João Victor</h2>
+                    <button class="perfil-edit-btn" aria-label="Editar perfil">
+                      <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 flex-wrap">
+                    <span class="perfil-meta">
+                      <i class="fa-regular fa-envelope"></i>
+                      joao.victor@email.com
+                    </span>
+                    <span class="perfil-meta">
+                      <i class="fa-regular fa-calendar"></i>
+                      Membro desde Mai 2024
+                    </span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <span class="perfil-stat-chip perfil-stat-chip--green">
+                      Nível<strong>5</strong>
+                    </span>
+                    <span class="perfil-stat-chip perfil-stat-chip--gray">
+                      XP<strong>2.450</strong>
+                    </span>
+                    <span class="perfil-stat-chip perfil-stat-chip--hc">
+                      Próximo nível<strong>550 XP</strong>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-sm text-secondary">Progresso para Nível 6</span>
+                <span class="text-sm font-bold trilha-pct">82%</span>
+              </div>
+              <div class="progress-bar perfil-progress-bar">
+                <div class="progress-fill" style="width: 82%"></div>
+              </div>
+            </div>
+
+            <!-- Grid de estatísticas -->
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="card perfil-stat-card">
+                  <div class="perfil-stat-icon perfil-stat-icon--blue">
+                    <i class="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div class="d-flex flex-column gap-1">
+                    <span class="perfil-stat-label">Missões Completadas</span>
+                    <span class="perfil-stat-valor">48</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card perfil-stat-card">
+                  <div class="perfil-stat-icon perfil-stat-icon--orange">
+                    <i class="fa-solid fa-fire"></i>
+                  </div>
+                  <div class="d-flex flex-column gap-1">
+                    <span class="perfil-stat-label">Streak Atual</span>
+                    <span class="perfil-stat-valor">5 dias</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card perfil-stat-card">
+                  <div class="perfil-stat-icon perfil-stat-icon--hc">
+                    <i class="fa-solid fa-coins"></i>
+                  </div>
+                  <div class="d-flex flex-column gap-1">
+                    <span class="perfil-stat-label">Total de Coins Ganhos</span>
+                    <span class="perfil-stat-valor">3.450</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card perfil-stat-card">
+                  <div class="perfil-stat-icon perfil-stat-icon--trophy">
+                    <i class="fa-solid fa-trophy"></i>
+                  </div>
+                  <div class="d-flex flex-column gap-1">
+                    <span class="perfil-stat-label">Conquistas</span>
+                    <span class="perfil-stat-valor">12</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Conquistas recentes -->
+            <div class="card">
+              <div class="d-flex align-items-center gap-2 mb-4">
+                <div class="perfil-stat-icon perfil-stat-icon--trophy">
+                  <i class="fa-solid fa-trophy"></i>
+                </div>
+                <h3 class="perfil-secao-titulo">Conquistas Recentes</h3>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <!-- Semana Ativa — desbloqueada -->
+                <div class="col-6">
+                  <div class="perfil-conquista-item perfil-conquista-item--done">
+                    <div class="perfil-conquista-icon perfil-conquista-icon--orange">
+                      <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                      <span class="perfil-conquista-nome">Semana Ativa</span>
+                      <span class="perfil-conquista-desc">Completou 7 dias consecutivos</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Mestre do Sono — desbloqueada -->
+                <div class="col-6">
+                  <div class="perfil-conquista-item perfil-conquista-item--done">
+                    <div class="perfil-conquista-icon perfil-conquista-icon--purple">
+                      <i class="fa-solid fa-moon"></i>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                      <span class="perfil-conquista-nome">Mestre do Sono</span>
+                      <span class="perfil-conquista-desc">Dormiu 7h+ por 10 dias</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Hidratação em Dia — desbloqueada -->
+                <div class="col-6">
+                  <div class="perfil-conquista-item perfil-conquista-item--done">
+                    <div class="perfil-conquista-icon perfil-conquista-icon--blue">
+                      <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                      <span class="perfil-conquista-nome">Hidratação em Dia</span>
+                      <span class="perfil-conquista-desc">30 dias bebendo 2L de água</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Maratonista — bloqueada -->
+                <div class="col-6">
+                  <div class="perfil-conquista-item">
+                    <div class="perfil-conquista-icon perfil-conquista-icon--locked">
+                      <i class="fa-solid fa-person-running"></i>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                      <span class="perfil-conquista-nome text-muted">Maratonista</span>
+                      <span class="perfil-conquista-desc">Caminhou 100km no total</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a href="conquistas.html" class="btn perfil-btn-conquistas">
+                Ver Todas as Conquistas
+              </a>
+            </div>
+          </div>
+
+          <!-- Coluna direita — atalhos -->
+          <div class="col-12 col-lg-4 d-flex flex-column gap-4">
+            <!-- Configurações -->
+            <a href="configuracoes.html" class="card perfil-atalho">
+              <div class="perfil-atalho-icon perfil-atalho-icon--gray">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="d-flex flex-column gap-1">
+                <span class="perfil-atalho-titulo">Configurações</span>
+                <span class="perfil-atalho-desc">Ajuste suas preferências</span>
+              </div>
+            </a>
+
+            <!-- Minhas Recompensas -->
+            <a href="recompensas.html" class="card perfil-atalho">
+              <div class="perfil-atalho-icon perfil-atalho-icon--green">
+                <i class="fa-solid fa-gift"></i>
+              </div>
+              <div class="d-flex flex-column gap-1">
+                <span class="perfil-atalho-titulo">Minhas Recompensas</span>
+                <span class="perfil-atalho-desc">Vouchers resgatados</span>
+              </div>
+            </a>
+
+            <!-- Descobertas -->
+            <a href="descobertas.html" class="card perfil-atalho">
+              <div class="perfil-atalho-icon perfil-atalho-icon--yellow">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <div class="d-flex flex-column gap-1">
+                <span class="perfil-atalho-titulo">Descobertas</span>
+                <span class="perfil-atalho-desc">Insights sobre sua saúde</span>
+              </div>
+            </a>
+          </div>
+        </div>
       </section>
     </main>
-
   </div>
 
   <button class="fab" aria-label="Ações rápidas">

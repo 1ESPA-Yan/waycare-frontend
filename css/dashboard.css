@@ -312,15 +312,6 @@
   gap: var(--space-1);
 }
 
-.mission-hc {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-hc);
-}
-
 .mission-btn-done {
   background-color: #f0f0f0 !important;
   color: var(--color-text-muted) !important;

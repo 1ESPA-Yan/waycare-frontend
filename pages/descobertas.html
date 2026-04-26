@@ -7,9 +7,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="../css/global.css" />
@@ -18,7 +21,6 @@
 
 <body>
   <div class="app-layout">
-
     <aside class="sidebar" id="sidebar" role="navigation" aria-label="Menu principal">
       <div class="sidebar-logo">WayCare</div>
 
@@ -64,10 +66,13 @@
 
     <main class="main-content" id="main-content">
       <header class="topbar">
-        <h1>Descobertas</h1>
+        <a href="dashboard.html" class="descobertas-voltar">
+          <i class="fa-solid fa-arrow-left"></i>
+          Voltar
+        </a>
         <div class="topbar-actions">
           <div class="hc-chip">
-            <span class="hc-icon"></span>
+            <span class="fa-solid fa-coins"></span>
             1300 HC
           </div>
           <button class="notif-btn" aria-label="Notificações">
@@ -78,10 +83,184 @@
       </header>
 
       <section id="page-content">
-        <!-- Todo conteúdo das descobertas vai vir aqui -->
+        <!-- Título da página -->
+        <div class="d-flex align-items-center gap-3 mb-2">
+          <div class="descobertas-titulo-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h1 class="descobertas-titulo">Descobertas</h1>
+        </div>
+        <p class="descobertas-subtitulo mb-5">Insights personalizados sobre seus hábitos de saúde baseados nos seus dados</p>
+
+        <!-- Cards de descoberta -->
+        <div class="d-flex flex-column gap-4">
+          <!-- Descoberta — Padrão de Sono -->
+          <div class="card descoberta-card">
+            <div class="d-flex align-items-start gap-4 mb-3">
+              <div class="descoberta-icon descoberta-icon--purple">
+                <i class="fa-solid fa-moon"></i>
+              </div>
+              <div class="d-flex flex-column gap-2">
+                <h3 class="descoberta-nome">Padrão de Sono</h3>
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span class="badge badge-purple">Sono</span>
+                  <span class="badge descoberta-badge--alto">Impacto: Alto</span>
+                  <span class="descoberta-data">Hoje</span>
+                </div>
+              </div>
+            </div>
+            <div class="descoberta-insight">
+              <i class="fa-solid fa-lightbulb descoberta-insight-icon"></i>
+              <span>Você dorme melhor nos dias que caminha à tarde</span>
+            </div>
+            <p class="descoberta-dado">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+              Completou 5 caminhadas → Dormiu 7h+ em 4 noites
+            </p>
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <button class="btn descoberta-btn-criar">Criar missão baseada nisto</button>
+              <button class="btn descoberta-btn-historico">Ver histórico completo</button>
+            </div>
+          </div>
+
+          <!-- Descoberta — Hidratação e Energia -->
+          <div class="card descoberta-card">
+            <div class="d-flex align-items-start gap-4 mb-3">
+              <div class="descoberta-icon descoberta-icon--blue">
+                <i class="fa-solid fa-droplet"></i>
+              </div>
+              <div class="d-flex flex-column gap-2">
+                <h3 class="descoberta-nome">Hidratação e Energia</h3>
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span class="badge badge-warning">Nutrição</span>
+                  <span class="badge descoberta-badge--medio">Impacto: Médio</span>
+                  <span class="descoberta-data">Ontem</span>
+                </div>
+              </div>
+            </div>
+            <div class="descoberta-insight">
+              <i class="fa-solid fa-lightbulb descoberta-insight-icon"></i>
+              <span>Seu humor melhora quando você bebe água pela manhã</span>
+            </div>
+            <p class="descoberta-dado">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+              8 dias com água matinal → Humor "energético" em 7 dias
+            </p>
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <button class="btn descoberta-btn-criar">Criar missão baseada nisto</button>
+              <button class="btn descoberta-btn-historico">Ver histórico completo</button>
+            </div>
+          </div>
+
+          <!-- Descoberta — Estresse e Meditação -->
+          <div class="card descoberta-card">
+            <div class="d-flex align-items-start gap-4 mb-3">
+              <div class="descoberta-icon descoberta-icon--teal">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div class="d-flex flex-column gap-2">
+                <h3 class="descoberta-nome">Estresse e Meditação</h3>
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span class="badge badge-teal">Mindfulness</span>
+                  <span class="badge descoberta-badge--alto">Impacto: Alto</span>
+                  <span class="descoberta-data">Há 2 dias</span>
+                </div>
+              </div>
+            </div>
+            <div class="descoberta-insight">
+              <i class="fa-solid fa-lightbulb descoberta-insight-icon"></i>
+              <span>Meditação reduz seu estresse em 40%</span>
+            </div>
+            <p class="descoberta-dado">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+              10 sessões de meditação → Humor estressado caiu de 50% para 30%
+            </p>
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <button class="btn descoberta-btn-criar">Criar missão baseada nisto</button>
+              <button class="btn descoberta-btn-historico">Ver histórico completo</button>
+            </div>
+          </div>
+
+          <!-- Descoberta — Movimento e Produtividade -->
+          <div class="card descoberta-card">
+            <div class="d-flex align-items-start gap-4 mb-3">
+              <div class="descoberta-icon descoberta-icon--green">
+                <i class="fa-solid fa-person-running"></i>
+              </div>
+              <div class="d-flex flex-column gap-2">
+                <h3 class="descoberta-nome">Movimento e Produtividade</h3>
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span class="badge badge-info">Movimento</span>
+                  <span class="badge descoberta-badge--medio">Impacto: Médio</span>
+                  <span class="descoberta-data">Há 3 dias</span>
+                </div>
+              </div>
+            </div>
+            <div class="descoberta-insight">
+              <i class="fa-solid fa-lightbulb descoberta-insight-icon"></i>
+              <span>Você completa mais missões nos dias que caminha</span>
+            </div>
+            <p class="descoberta-dado">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+              Dias com 5k passos → 85% de missões completadas
+            </p>
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <button class="btn descoberta-btn-criar">Criar missão baseada nisto</button>
+              <button class="btn descoberta-btn-historico">Ver histórico completo</button>
+            </div>
+          </div>
+
+          <!-- Descoberta — Alimentação Balanceada -->
+          <div class="card descoberta-card">
+            <div class="d-flex align-items-start gap-4 mb-3">
+              <div class="descoberta-icon descoberta-icon--orange">
+                <i class="fa-solid fa-apple-whole"></i>
+              </div>
+              <div class="d-flex flex-column gap-2">
+                <h3 class="descoberta-nome">Alimentação Balanceada</h3>
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span class="badge badge-warning">Nutrição</span>
+                  <span class="badge descoberta-badge--baixo">Impacto: Baixo</span>
+                  <span class="descoberta-data">Há 5 dias</span>
+                </div>
+              </div>
+            </div>
+            <div class="descoberta-insight">
+              <i class="fa-solid fa-lightbulb descoberta-insight-icon"></i>
+              <span>Refeições regulares melhoram sua consistência</span>
+            </div>
+            <p class="descoberta-dado">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+              7 dias com 3 refeições → Streak de 7 dias mantido
+            </p>
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <button class="btn descoberta-btn-criar">Criar missão baseada nisto</button>
+              <button class="btn descoberta-btn-historico">Ver histórico completo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card informativo — WayCare Band -->
+        <div class="descobertas-info mt-5">
+          <div class="descobertas-info-icon">
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+          <div class="d-flex flex-column gap-2">
+            <h4 class="descobertas-info-titulo">Como funcionam as descobertas?</h4>
+            <p class="descobertas-info-desc">
+              A WayCare Band — nossa pulseira inteligente — coleta seus dados de saúde em tempo real:
+              sono, passos, hidratação e humor. Com esses dados, identificamos padrões e correlações
+              personalizadas para você. Quanto mais você usa a WayCare Band, mais precisas ficam as descobertas!
+            </p>
+            <ul class="descobertas-info-lista">
+              <li><i class="fa-solid fa-circle-dot"></i> Novas descobertas são geradas semanalmente</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Baseadas em pelo menos 7 dias de dados da pulseira</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Priorizamos insights com maior impacto na sua saúde</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
-
   </div>
 
   <button class="fab" aria-label="Ações rápidas">

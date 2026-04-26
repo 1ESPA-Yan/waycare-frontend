@@ -385,6 +385,16 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
   display: inline-block;
 }
 
+/* Health Coins em cards de missão, trilhas e conquistas */
+.mission-hc {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-hc);
+}
+
 /* Inputs */
 .input-group {
   display: flex;

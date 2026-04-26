@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WayCare — Trilhas</title>
+  <title>WayCare — Conquistas</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="../css/global.css" />
-  <link rel="stylesheet" href="../css/trilhas.css" />
+  <link rel="stylesheet" href="../css/conquistas.css" />
 </head>
 
 <body>
@@ -64,10 +67,13 @@
 
     <main class="main-content" id="main-content">
       <header class="topbar">
-        <h1>Conquistas</h1>
+        <a href="dashboard.html" class="conquistas-voltar">
+          <i class="fa-solid fa-arrow-left"></i>
+          Voltar
+        </a>
         <div class="topbar-actions">
           <div class="hc-chip">
-            <span class="hc-icon"></span>
+            <span class="fa-solid fa-coins"></span>
             1300 HC
           </div>
           <button class="notif-btn" aria-label="Notificações">
@@ -78,10 +84,238 @@
       </header>
 
       <section id="page-content">
-        <!-- Todo conteúdo das conquistas vai vir aqui -->
+        <!-- Título da página -->
+        <div class="d-flex align-items-center gap-3 mb-5">
+          <div class="conquistas-titulo-icon">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <h1 class="conquistas-titulo">Conquistas</h1>
+        </div>
+
+        <!-- Card de resumo geral -->
+        <div class="card conquistas-resumo mb-5">
+          <div class="d-flex align-items-center justify-content-between gap-4">
+            <div class="d-flex flex-column gap-2 flex-grow-1">
+              <h2 class="conquistas-resumo-titulo">3 de 6 Conquistados</h2>
+              <p class="conquistas-resumo-desc">Continue completando missões para desbloquear mais!</p>
+              <div class="progress-bar conquistas-progress-bar">
+                <div class="progress-fill conquistas-progress-fill" style="width: 50%"></div>
+              </div>
+            </div>
+            <div class="conquistas-resumo-icon">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid de conquistas -->
+        <div class="row g-4">
+          <!-- Conquista desbloqueada — Semana Ativa -->
+          <div class="col-12 col-lg-6">
+            <div class="card conquista-card">
+              <div class="d-flex align-items-start gap-4">
+                <div class="conquista-icon conquista-icon--orange">
+                  <i class="fa-solid fa-fire"></i>
+                </div>
+                <div class="d-flex flex-column gap-2 flex-grow-1">
+                  <div>
+                    <h3 class="conquista-nome">Semana Ativa</h3>
+                    <p class="conquista-desc">Complete 7 dias consecutivos</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="conquista-progresso-label">Progresso: 7/7</span>
+                    <span class="conquista-pct conquista-pct--done">100%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill conquista-fill--done" style="width: 100%"></div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="mission-hc"><span class="fa-solid fa-coins"></span> 100 HC</span>
+                    <span class="conquista-status conquista-status--done">
+                      <i class="fa-regular fa-circle-check"></i>
+                      Desbloqueado há 2 dias
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conquista desbloqueada — Mestre do Sono -->
+          <div class="col-12 col-lg-6">
+            <div class="card conquista-card">
+              <div class="d-flex align-items-start gap-4">
+                <div class="conquista-icon conquista-icon--purple">
+                  <i class="fa-solid fa-moon"></i>
+                </div>
+                <div class="d-flex flex-column gap-2 flex-grow-1">
+                  <div>
+                    <h3 class="conquista-nome">Mestre do Sono</h3>
+                    <p class="conquista-desc">Durma 7h+ por 10 dias</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="conquista-progresso-label">Progresso: 10/10</span>
+                    <span class="conquista-pct conquista-pct--done">100%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill conquista-fill--done" style="width: 100%"></div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="mission-hc"><span class="fa-solid fa-coins"></span> 150 HC</span>
+                    <span class="conquista-status conquista-status--done">
+                      <i class="fa-regular fa-circle-check"></i>
+                      Desbloqueado há 5 dias
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conquista desbloqueada — Hidratação em Dia -->
+          <div class="col-12 col-lg-6">
+            <div class="card conquista-card">
+              <div class="d-flex align-items-start gap-4">
+                <div class="conquista-icon conquista-icon--blue">
+                  <i class="fa-solid fa-droplet"></i>
+                </div>
+                <div class="d-flex flex-column gap-2 flex-grow-1">
+                  <div>
+                    <h3 class="conquista-nome">Hidratação em Dia</h3>
+                    <p class="conquista-desc">Beba 2L de água por 30 dias</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="conquista-progresso-label">Progresso: 30/30</span>
+                    <span class="conquista-pct conquista-pct--done">100%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill conquista-fill--done" style="width: 100%"></div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="mission-hc"><span class="fa-solid fa-coins"></span> 200 HC</span>
+                    <span class="conquista-status conquista-status--done">
+                      <i class="fa-regular fa-circle-check"></i>
+                      Desbloqueado há 1 semana
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conquista bloqueada — Maratonista -->
+          <div class="col-12 col-lg-6">
+            <div class="card conquista-card conquista-card--bloqueada">
+              <div class="d-flex align-items-start gap-4">
+                <div class="conquista-icon conquista-icon--locked conquista-icon--stack">
+                  <i class="fa-solid fa-shoe-prints conquista-icon-bg"></i>
+                  <i class="fa-solid fa-lock conquista-icon-lock"></i>
+                </div>
+                <div class="d-flex flex-column gap-2 flex-grow-1">
+                  <div>
+                    <h3 class="conquista-nome text-muted">Maratonista</h3>
+                    <p class="conquista-desc">Caminhe 100km no total</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="conquista-progresso-label">Progresso: 67/100</span>
+                    <span class="conquista-pct conquista-pct--progress">67%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 67%"></div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="mission-hc"><span class="fa-solid fa-coins"></span> 500 HC</span>
+                    <span class="conquista-status conquista-status--locked">
+                      <i class="fa-solid fa-lock"></i>
+                      Bloqueado
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conquista bloqueada — Zen Master -->
+          <div class="col-12 col-lg-6">
+            <div class="card conquista-card conquista-card--bloqueada">
+              <div class="d-flex align-items-start gap-4">
+                <div class="conquista-icon conquista-icon--locked conquista-icon--stack">
+                  <i class="fa-solid fa-brain conquista-icon-bg"></i>
+                  <i class="fa-solid fa-lock conquista-icon-lock"></i>
+                </div>
+                <div class="d-flex flex-column gap-2 flex-grow-1">
+                  <div>
+                    <h3 class="conquista-nome text-muted">Zen Master</h3>
+                    <p class="conquista-desc">Medite por 30 dias seguidos</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="conquista-progresso-label">Progresso: 12/30</span>
+                    <span class="conquista-pct conquista-pct--progress">40%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 40%"></div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="mission-hc"><span class="fa-solid fa-coins"></span> 300 HC</span>
+                    <span class="conquista-status conquista-status--locked">
+                      <i class="fa-solid fa-lock"></i>
+                      Bloqueado
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conquista bloqueada — Preventivo -->
+          <div class="col-12 col-lg-6">
+            <div class="card conquista-card conquista-card--bloqueada">
+              <div class="d-flex align-items-start gap-4">
+                <div class="conquista-icon conquista-icon--locked-red conquista-icon--stack">
+                  <i class="fa-solid fa-heart-pulse conquista-icon-bg"></i>
+                  <i class="fa-solid fa-lock conquista-icon-lock"></i>
+                </div>
+                <div class="d-flex flex-column gap-2 flex-grow-1">
+                  <div>
+                    <h3 class="conquista-nome text-muted">Preventivo</h3>
+                    <p class="conquista-desc">Realize check-ups anuais por 3 anos</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="conquista-progresso-label">Progresso: 1/3</span>
+                    <span class="conquista-pct conquista-pct--progress">33%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 33%"></div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="mission-hc"><span class="fa-solid fa-coins"></span> 1000 HC</span>
+                    <span class="conquista-status conquista-status--locked">
+                      <i class="fa-solid fa-lock"></i>
+                      Bloqueado
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card informativo — como desbloquear -->
+        <div class="conquistas-dica mt-5">
+          <div class="conquistas-dica-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <div class="d-flex flex-column gap-2">
+            <h4 class="conquistas-dica-titulo">Como Desbloquear Conquistas</h4>
+            <ul class="conquistas-dica-lista">
+              <li><i class="fa-solid fa-circle-dot"></i> Complete missões diárias e mantenha sua sequência</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Cada conquista desbloqueada dá Health Coins de bônus</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Algumas conquistas são ocultas — descubra fazendo ações especiais!</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
-
   </div>
 
   <button class="fab" aria-label="Ações rápidas">

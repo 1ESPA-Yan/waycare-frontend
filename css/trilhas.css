@@ -208,15 +208,6 @@
   gap: var(--space-1);
 }
 
-.mission-hc {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-hc);
-}
-
 /* Status badge */
 .trilha-status-badge {
   font-size: var(--font-size-xs);
