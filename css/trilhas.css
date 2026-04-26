@@ -15,6 +15,15 @@
   margin: 0;
 }
 
+.trilhas-subtitle-icon {
+  color: var(--color-warning);
+}
+
+.trilhas-subtitle-texto {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
 /* Cards de resumo */
 .resumo-card {
   display: flex;
@@ -153,12 +162,28 @@
 }
 
 .trilha-thumb {
-  font-size: 36px;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
   flex-shrink: 0;
+  background-color: #e8f5f0;
+  color: var(--color-primary);
 }
 
+.trilha-thumb--purple { background-color: #ede7f6; color: #5e35b1; }
+.trilha-thumb--blue   { background-color: #e3f2fd; color: #1565c0; }
+.trilha-thumb--green  { background-color: #e8f5f0; color: #1c9770; }
+.trilha-thumb--orange { background-color: #fff3e0; color: #e65100; }
+.trilha-thumb--red    { background-color: #ffebee; color: #e53935; }
+
 .trilha-thumb--locked {
-  opacity: 0.4;
+  background-color: var(--color-bg);
+  color: var(--color-text-muted);
+  opacity: 0.6;
 }
 
 .trilha-nome {
@@ -205,14 +230,45 @@
 }
 
 /* Cores da trilha azul */
-.trilha-pct--blue { color: #4aaee8; }
-.trilha-fill--blue { background-color: #4aaee8; }
+.trilha-pct--blue   { color: #4aaee8; }
+.trilha-fill--blue  { background-color: #4aaee8; }
+
+/* Cores da trilha roxa (Sono) */
+.trilha-pct--purple  { color: #5e35b1; }
+.trilha-fill--purple { background-color: #5e35b1; }
+
+/* Status badge roxo */
+.trilha-status-badge--purple { color: #5e35b1; }
+
+/* Botão teal (Mente Tranquila) */
+.trilha-btn-iniciar--teal {
+  color: #00897b;
+  border-color: #00897b;
+  border-radius: var(--radius-md) !important;
+}
+.trilha-btn-iniciar--teal:hover {
+  background-color: #e0f7f4;
+}
+
+/* Botão laranja (Alimentação Consciente) */
+.trilha-btn-iniciar--orange {
+  color: #e65100;
+  border-color: #e65100;
+  border-radius: var(--radius-md) !important;
+}
+.trilha-btn-iniciar--orange:hover {
+  background-color: #fff3e0;
+}
+
+/* Thumb teal */
+.trilha-thumb--teal { background-color: #e0f7f4; color: #00897b; }
 
 /* Botões de trilha */
 .trilha-btn-continuar {
   background-color: #6c63ff;
   color: var(--color-white);
   border: none;
+  border-radius: var(--radius-md) !important;
   width: 100%;
 }
 
@@ -224,6 +280,7 @@
 
 .trilha-btn-continuar--blue {
   background-color: #4aaee8;
+  border-radius: var(--radius-md);
 }
 
 .trilha-btn-continuar--blue:hover {
@@ -234,6 +291,7 @@
   background-color: transparent;
   color: var(--color-primary);
   border: 1.5px solid var(--color-primary);
+  border-radius: var(--radius-md) !important;
   width: 100%;
 }
 
@@ -244,6 +302,7 @@
 .trilha-btn-iniciar--checkup {
   color: var(--color-error);
   border-color: var(--color-error);
+  border-radius: var(--radius-md) !important;
 }
 
 .trilha-btn-iniciar--checkup:hover {
@@ -256,7 +315,7 @@
   border: 1px solid var(--color-border);
   width: 100%;
   min-height: 44px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-md);
   cursor: not-allowed;
 }
 

@@ -21,7 +21,6 @@
 
 <body>
   <div class="app-layout">
-
     <aside class="sidebar" id="sidebar" role="navigation" aria-label="Menu principal">
       <div class="sidebar-logo">WayCare</div>
 
@@ -66,13 +65,12 @@
     </aside>
 
     <main class="main-content" id="main-content">
-
       <header class="topbar">
         <div>
           <h1 class="trilhas-page-title">Trilhas de Bem-estar</h1>
           <p class="trilhas-page-subtitle">
-            Recomendado para você: 😊
-            <a href="#" class="text-primary font-medium">Mindfulness &amp; Nutrição</a>
+            Recomendado para você: <i class="fa-solid fa-bolt trilhas-subtitle-icon"></i>
+            <span class="trilhas-subtitle-texto">Movimento & Nutrição</span>
           </p>
         </div>
         <div class="topbar-actions">
@@ -88,7 +86,6 @@
       </header>
 
       <section id="page-content">
-
         <!-- Cards de resumo -->
         <div class="row g-3 mb-4">
           <div class="col-6 col-lg-3">
@@ -174,34 +171,33 @@
           </div>
 
           <div class="row g-4">
-
             <div class="col-12 col-lg-6">
               <div class="card trilha-card d-flex flex-column gap-3">
                 <div class="d-flex align-items-start gap-3">
-                  <span class="trilha-thumb">🌙</span>
+                  <div class="trilha-thumb trilha-thumb--purple"><i class="fa-solid fa-moon"></i></div>
                   <div class="d-flex flex-column gap-1">
                     <div class="d-flex align-items-center gap-2">
                       <h3 class="trilha-nome">Sono Profundo</h3>
-                      <span class="trilha-status-badge">● Em andamento</span>
+                      <span class="trilha-status-badge trilha-status-badge--purple">● Em andamento</span>
                     </div>
                     <div class="d-flex align-items-center gap-2">
-                      <span class="badge badge-primary">Fácil</span>
+                      <span class="badge badge-purple">Fácil</span>
                       <span class="text-xs text-muted">Nível 1 · 1.240 participantes</span>
                     </div>
                   </div>
                 </div>
                 <p class="trilha-desc">Melhore a qualidade do seu sono com hábitos noturnos saudáveis e rotinas de relaxamento comprovadas.</p>
                 <div class="d-flex gap-2 flex-wrap">
-                  <span class="badge badge-muted">Relaxamento</span>
-                  <span class="badge badge-muted">Rotina</span>
-                  <span class="badge badge-muted">Descanso</span>
+                  <span class="badge badge-purple">Relaxamento</span>
+                  <span class="badge badge-purple">Rotina</span>
+                  <span class="badge badge-purple">Descanso</span>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <span class="text-sm text-secondary">Progresso da trilha</span>
-                  <span class="text-sm font-bold text-primary">60%</span>
+                  <span class="text-sm font-bold trilha-pct--purple">60%</span>
                 </div>
                 <div class="progress-bar">
-                  <div class="progress-fill" style="width: 60%"></div>
+                  <div class="progress-fill trilha-fill--purple" style="width: 60%"></div>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="d-flex align-items-center gap-3">
@@ -219,7 +215,7 @@
             <div class="col-12 col-lg-6">
               <div class="card trilha-card trilha-card--blue d-flex flex-column gap-3">
                 <div class="d-flex align-items-start gap-3">
-                  <span class="trilha-thumb">🏃</span>
+                  <div class="trilha-thumb trilha-thumb--blue"><i class="fa-solid fa-person-running"></i></div>
                   <div class="d-flex flex-column gap-1">
                     <div class="d-flex align-items-center gap-2">
                       <h3 class="trilha-nome">Movimento Diário</h3>
@@ -233,9 +229,9 @@
                 </div>
                 <p class="trilha-desc">Incorpore atividade física leve à sua rotina diária sem precisar ir à academia.</p>
                 <div class="d-flex gap-2 flex-wrap">
-                  <span class="badge badge-muted">Passos</span>
-                  <span class="badge badge-muted">Cardio</span>
-                  <span class="badge badge-muted">Energia</span>
+                  <span class="badge badge-info">Passos</span>
+                  <span class="badge badge-info">Cardio</span>
+                  <span class="badge badge-info">Energia</span>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <span class="text-sm text-secondary">Progresso da trilha</span>
@@ -256,7 +252,6 @@
                 </button>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -269,14 +264,13 @@
           </div>
 
           <div class="row g-4">
-
             <div class="col-12 col-lg-6">
               <div class="card trilha-card trilha-card-recomendada d-flex flex-column gap-3">
                 <span class="trilha-recomendada-label">
                   <i class="fa-solid fa-star"></i> Recomendada para seu humor
                 </span>
                 <div class="d-flex align-items-start gap-3">
-                  <span class="trilha-thumb">🧘</span>
+                  <div class="trilha-thumb trilha-thumb--green"><i class="fa-solid fa-brain"></i></div>
                   <div class="d-flex flex-column gap-1">
                     <h3 class="trilha-nome">Mente Tranquila</h3>
                     <div class="d-flex align-items-center gap-2">
@@ -287,9 +281,9 @@
                 </div>
                 <p class="trilha-desc">Reduza o estresse e a ansiedade com técnicas de mindfulness e respiração consciente.</p>
                 <div class="d-flex gap-2 flex-wrap">
-                  <span class="badge badge-muted">Respiração</span>
-                  <span class="badge badge-muted">Foco</span>
-                  <span class="badge badge-muted">Ansiedade</span>
+                  <span class="badge badge-teal">Respiração</span>
+                  <span class="badge badge-teal">Foco</span>
+                  <span class="badge badge-teal">Ansiedade</span>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="d-flex align-items-center gap-3">
@@ -298,7 +292,7 @@
                   </div>
                   <span class="mission-hc"><span class="hc-icon"></span> +420 HC</span>
                 </div>
-                <button class="btn trilha-btn-iniciar">+ Iniciar Trilha</button>
+                <button class="btn trilha-btn-iniciar trilha-btn-iniciar--teal">+ Iniciar Trilha</button>
               </div>
             </div>
 
@@ -308,20 +302,20 @@
                   <i class="fa-solid fa-star"></i> Recomendada para seu humor
                 </span>
                 <div class="d-flex align-items-start gap-3">
-                  <span class="trilha-thumb">🥗</span>
+                  <div class="trilha-thumb trilha-thumb--orange"><i class="fa-solid fa-bowl-food"></i></div>
                   <div class="d-flex flex-column gap-1">
                     <h3 class="trilha-nome">Alimentação Consciente</h3>
                     <div class="d-flex align-items-center gap-2">
-                      <span class="badge badge-error">Difícil</span>
+                      <span class="badge badge-warning">Difícil</span>
                       <span class="text-xs text-muted">Nível 3 · 660 participantes</span>
                     </div>
                   </div>
                 </div>
                 <p class="trilha-desc">Desenvolva uma relação saudável com a comida e melhore seus hábitos alimentares.</p>
                 <div class="d-flex gap-2 flex-wrap">
-                  <span class="badge badge-muted">Hidratação</span>
-                  <span class="badge badge-muted">Proteína</span>
-                  <span class="badge badge-muted">Vitaminas</span>
+                  <span class="badge badge-warning">Hidratação</span>
+                  <span class="badge badge-warning">Proteína</span>
+                  <span class="badge badge-warning">Vitaminas</span>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="d-flex align-items-center gap-3">
@@ -330,14 +324,14 @@
                   </div>
                   <span class="mission-hc"><span class="hc-icon"></span> +900 HC</span>
                 </div>
-                <button class="btn trilha-btn-iniciar">+ Iniciar Trilha</button>
+                <button class="btn trilha-btn-iniciar trilha-btn-iniciar--orange">+ Iniciar Trilha</button>
               </div>
             </div>
 
             <div class="col-12 col-lg-6">
               <div class="card trilha-card trilha-card-checkup d-flex flex-column gap-3">
                 <div class="d-flex align-items-start gap-3">
-                  <span class="trilha-thumb">📋</span>
+                  <div class="trilha-thumb trilha-thumb--red"><i class="fa-solid fa-clipboard-list"></i></div>
                   <div class="d-flex flex-column gap-1">
                     <h3 class="trilha-nome">Check-up Preventivo</h3>
                     <div class="d-flex align-items-center gap-2">
@@ -348,9 +342,9 @@
                 </div>
                 <p class="trilha-desc">Cuide da sua saúde com consultas regulares e exames preventivos essenciais.</p>
                 <div class="d-flex gap-2 flex-wrap">
-                  <span class="badge badge-muted">Consulta</span>
-                  <span class="badge badge-muted">Exames</span>
-                  <span class="badge badge-muted">Prevenção</span>
+                  <span class="badge badge-error">Consulta</span>
+                  <span class="badge badge-error">Exames</span>
+                  <span class="badge badge-error">Prevenção</span>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="d-flex align-items-center gap-3">
@@ -362,7 +356,6 @@
                 <button class="btn trilha-btn-iniciar trilha-btn-iniciar--checkup">+ Iniciar Trilha</button>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -375,11 +368,10 @@
           </div>
 
           <div class="row g-4">
-
             <div class="col-12 col-lg-6">
               <div class="card trilha-card trilha-card-bloqueada d-flex flex-column gap-3">
                 <div class="d-flex align-items-start gap-3">
-                  <span class="trilha-thumb trilha-thumb--locked">🚴</span>
+                  <div class="trilha-thumb trilha-thumb--locked"><i class="fa-solid fa-person-biking"></i></div>
                   <div class="d-flex flex-column gap-1">
                     <div class="d-flex align-items-center gap-2">
                       <h3 class="trilha-nome text-muted">Cardio Intenso</h3>
@@ -409,13 +401,10 @@
                 </button>
               </div>
             </div>
-
           </div>
         </div>
-
       </section>
     </main>
-
   </div>
 
   <!-- Botão flutuante inferior -->

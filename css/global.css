@@ -330,7 +330,7 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
   display: inline-flex;
   align-items: center;
   padding: var(--space-1) var(--space-3);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
   white-space: nowrap;
@@ -342,6 +342,8 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
 .badge-info      { background-color: #e3f2fd; color: #1565c0; }
 .badge-error     { background-color: #ffebee; color: var(--color-error); }
 .badge-muted     { background-color: var(--color-bg); color: var(--color-text-muted); }
+.badge-purple    { background-color: #ede7f6; color: #5e35b1; }
+.badge-teal      { background-color: #e0f7f4; color: #00897b; }
 
 /* Progress Bar */
 .progress-bar {
@@ -559,6 +561,27 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
   display: flex;
   align-items: center;
   gap: var(--space-3);
+}
+
+.sidebar-logout {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+  background: none;
+  border: none;
+}
+
+.sidebar-logout:hover {
+  background-color: #ffebee;
+  color: var(--color-error);
 }
 
 .sidebar-user-info {
