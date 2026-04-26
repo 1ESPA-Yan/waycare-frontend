@@ -295,7 +295,7 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
 }
 
 .card-mission {
-  background-color: var(--color-surface);
+  background: var(--color-surface);
   border-radius: var(--radius-lg);
   padding: var(--space-5);
   box-shadow: var(--shadow-sm);
@@ -311,7 +311,6 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
 
 .card-mission.in-progress {
   border-color: var(--color-warning);
-  background-color: #fffbf2;
 }
 
 .card-mission.in-progress:hover {
@@ -320,7 +319,6 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
 
 .card-mission.completed {
   border-color: var(--color-accent-1);
-  background-color: var(--color-primary-light);
 }
 
 .card-mission.completed:hover {

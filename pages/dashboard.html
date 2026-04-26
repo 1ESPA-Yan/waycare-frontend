@@ -94,7 +94,7 @@
       <header class="topbar dashboard-topbar">
         <div class="topbar-greeting">
           <h1 class="greeting-title">Olá, João! 👋</h1>
-          <div class="humor-row">
+          <div class="d-flex align-items-center gap-3">
             <span class="humor-badge">
               <i class="fa-solid fa-bolt"></i>
               Energético
@@ -118,18 +118,18 @@
 
         <!-- Trilha de hoje -->
         <div class="trilha-card dashboard-section">
-          <div class="trilha-card-header">
-            <div class="trilha-card-title-row">
+          <div class="d-flex align-items-start justify-content-between gap-3 mb-3">
+            <div class="d-flex align-items-center gap-2">
               <span>🌙</span>
               <h2 class="trilha-card-title">Sua Trilha de Hoje: Sono Profundo</h2>
             </div>
             <a href="trilhas.html" class="trilha-link">Ver trilha completa →</a>
           </div>
-          <div class="trilha-progress-row">
+          <div class="d-flex justify-content-between align-items-center mb-1">
             <span class="text-sm text-secondary">3/5 missões completadas</span>
-            <span class="text-sm font-bold text-primary">60%</span>
+            <span class="text-sm font-bold trilha-pct">60%</span>
           </div>
-          <div class="progress-bar trilha-progress-bar">
+          <div class="progress-bar trilha-progress-bar mb-3">
             <div class="progress-fill" style="width: 60%"></div>
           </div>
           <div class="trilha-slots">
@@ -149,145 +149,161 @@
 
         <!-- Missões disponíveis -->
         <div class="dashboard-section">
-          <div class="flex items-center justify-between mb-4">
+          <div class="d-flex align-items-center justify-content-between mb-4">
             <h2 class="section-title">Missões Disponíveis</h2>
             <button class="filter-btn">
               Filtrar <i class="fa-solid fa-chevron-down"></i>
             </button>
           </div>
 
-          <div class="missoes-grid">
-
-            <div class="card-mission">
-              <div class="mission-top">
-                <span class="mission-emoji">👟</span>
-                <div class="flex flex-col gap-1">
-                  <h3 class="mission-title">Caminhar 5.000 passos</h3>
-                  <p class="mission-desc">Movimente-se ao longo do dia</p>
+          <div class="row g-4"
+            <!-- Missão — Movimento -->
+            <div class="col-12 col-md-6">
+              <div class="card-mission h-100 d-flex flex-column gap-3">
+                <div class="d-flex align-items-start gap-3">
+                  <span class="mission-emoji">👟</span>
+                  <div class="d-flex flex-column gap-1">
+                    <h3 class="mission-title">Caminhar 5.000 passos</h3>
+                    <p class="mission-desc">Movimente-se ao longo do dia</p>
+                  </div>
                 </div>
-              </div>
-              <div class="mission-meta">
-                <div class="flex items-center gap-2">
-                  <span class="mission-time"><i class="fa-regular fa-clock"></i> 30-40 min</span>
-                  <span class="badge badge-primary">Movimento</span>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="mission-time"><i class="fa-regular fa-clock"></i> 30-40 min</span>
+                    <span class="badge badge-info">Movimento</span>
+                  </div>
+                  <span class="mission-hc"><span class="hc-icon"></span> +50 HC</span>
                 </div>
-                <span class="mission-hc"><span class="hc-icon"></span> +50 HC</span>
+                <button class="btn btn-primary btn-block">Iniciar Missão</button>
               </div>
-              <button class="btn btn-primary btn-block">Iniciar Missão</button>
             </div>
 
-            <div class="card-mission bottle-mission">
-              <span class="bottle-mission-badge">
-                <i class="fa-solid fa-droplet"></i>
-                WayCare Bottle • Auto Sync
-              </span>
-              <div class="mission-top">
-                <span class="mission-emoji">💧</span>
-                <div class="flex flex-col gap-1">
-                  <h3 class="mission-title">Beber 2L de água</h3>
-                  <p class="mission-desc">Hidratação monitorada pelo WayCare Bottle</p>
+            <!-- Missão — WayCare Bottle (Hidratação) -->
+            <div class="col-12 col-md-6">
+              <div class="card-mission bottle-mission h-100 d-flex flex-column gap-3">
+                <span class="bottle-mission-badge">
+                  <i class="fa-solid fa-droplet"></i>
+                  WayCare Bottle • Auto Sync
+                </span>
+                <div class="d-flex align-items-start gap-3">
+                  <span class="mission-emoji">💧</span>
+                  <div class="d-flex flex-column gap-1">
+                    <h3 class="mission-title">Beber 2L de água</h3>
+                    <p class="mission-desc">Hidratação monitorada pelo WayCare Bottle</p>
+                  </div>
                 </div>
-              </div>
-              <div class="mission-progress-row">
-                <span class="bottle-mission-progress-label">450 ml / 2000 ml</span>
-                <span class="bottle-mission-progress-pct">23%</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 23%; background-color: #4aaee8"></div>
-              </div>
-              <div class="mission-meta">
-                <div class="flex items-center gap-2">
-                  <span class="mission-time"><i class="fa-regular fa-clock"></i> Durante o dia</span>
-                  <span class="badge badge-info">Hidratação</span>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="bottle-mission-progress-label">450 ml / 2000 ml</span>
+                  <span class="bottle-mission-progress-pct">23%</span>
                 </div>
-                <span class="mission-hc"><span class="hc-icon"></span> +30 HC</span>
+                <div class="progress-bar">
+                  <div class="progress-fill bottle-progress-fill" style="width: 23%"></div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="mission-time"><i class="fa-regular fa-clock"></i> Durante o dia</span>
+                    <span class="badge badge-info">Hidratação</span>
+                  </div>
+                  <span class="mission-hc"><span class="hc-icon"></span> +30 HC</span>
+                </div>
+                <button class="btn-bottle-auto" disabled>
+                  <i class="fa-solid fa-droplet"></i>
+                  Monitorado automaticamente
+                </button>
               </div>
-              <button class="btn-bottle-auto" disabled>
-                <i class="fa-solid fa-droplet"></i>
-                Monitorado automaticamente
-              </button>
             </div>
 
-            <div class="card-mission">
-              <div class="mission-top">
-                <span class="mission-emoji">😴</span>
-                <div class="flex flex-col gap-1">
-                  <h3 class="mission-title">Dormir 7h esta noite</h3>
-                  <p class="mission-desc">Prepare-se para uma boa noite</p>
+            <!-- Missão — Sono -->
+            <div class="col-12 col-md-6">
+              <div class="card-mission h-100 d-flex flex-column gap-3">
+                <div class="d-flex align-items-start gap-3">
+                  <span class="mission-emoji">😴</span>
+                  <div class="d-flex flex-column gap-1">
+                    <h3 class="mission-title">Dormir 7h esta noite</h3>
+                    <p class="mission-desc">Prepare-se para uma boa noite</p>
+                  </div>
                 </div>
-              </div>
-              <div class="mission-meta">
-                <div class="flex items-center gap-2">
-                  <span class="mission-time"><i class="fa-regular fa-clock"></i> Noite</span>
-                  <span class="badge badge-muted">Sono</span>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="mission-time"><i class="fa-regular fa-clock"></i> Noite</span>
+                    <span class="badge badge-secondary">Sono</span>
+                  </div>
+                  <span class="mission-hc"><span class="hc-icon"></span> +40 HC</span>
                 </div>
-                <span class="mission-hc"><span class="hc-icon"></span> +40 HC</span>
+                <button class="btn btn-primary btn-block">Ver detalhes</button>
               </div>
-              <button class="btn btn-primary btn-block">Ver detalhes</button>
             </div>
 
-            <div class="card-mission">
-              <div class="mission-top">
-                <span class="mission-emoji">🧘</span>
-                <div class="flex flex-col gap-1">
-                  <h3 class="mission-title">5 minutos de meditação</h3>
-                  <p class="mission-desc">Acalme sua mente</p>
+            <!-- Missão — Mindfulness -->
+            <div class="col-12 col-md-6">
+              <div class="card-mission h-100 d-flex flex-column gap-3">
+                <div class="d-flex align-items-start gap-3">
+                  <span class="mission-emoji">🧘</span>
+                  <div class="d-flex flex-column gap-1">
+                    <h3 class="mission-title">5 minutos de meditação</h3>
+                    <p class="mission-desc">Acalme sua mente</p>
+                  </div>
                 </div>
-              </div>
-              <div class="mission-meta">
-                <div class="flex items-center gap-2">
-                  <span class="mission-time"><i class="fa-regular fa-clock"></i> 5 min</span>
-                  <span class="badge badge-info">Mindfulness</span>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="mission-time"><i class="fa-regular fa-clock"></i> 5 min</span>
+                    <span class="badge badge-primary">Mindfulness</span>
+                  </div>
+                  <span class="mission-hc"><span class="hc-icon"></span> +30 HC</span>
                 </div>
-                <span class="mission-hc"><span class="hc-icon"></span> +30 HC</span>
+                <button class="btn btn-primary btn-block">Iniciar Missão</button>
               </div>
-              <button class="btn btn-primary btn-block">Iniciar Missão</button>
             </div>
 
-            <div class="card-mission">
-              <div class="mission-top">
-                <span class="mission-emoji">📋</span>
-                <div class="flex flex-col gap-1">
-                  <h3 class="mission-title">Check-up anual</h3>
-                  <p class="mission-desc">Agende sua consulta preventiva</p>
+            <!-- Missão — Check-up -->
+            <div class="col-12 col-md-6">
+              <div class="card-mission h-100 d-flex flex-column gap-3">
+                <div class="d-flex align-items-start gap-3">
+                  <span class="mission-emoji">📋</span>
+                  <div class="d-flex flex-column gap-1">
+                    <h3 class="mission-title">Check-up anual</h3>
+                    <p class="mission-desc">Agende sua consulta preventiva</p>
+                  </div>
                 </div>
-              </div>
-              <div class="mission-meta">
-                <div class="flex items-center gap-2">
-                  <span class="mission-time"><i class="fa-regular fa-clock"></i> 1 hora</span>
-                  <span class="badge badge-error">Check-up</span>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="mission-time"><i class="fa-regular fa-clock"></i> 1 hora</span>
+                    <span class="badge badge-error">Check-up</span>
+                  </div>
+                  <span class="mission-hc"><span class="hc-icon"></span> +500 HC</span>
                 </div>
-                <span class="mission-hc"><span class="hc-icon"></span> +500 HC</span>
+                <button class="btn btn-primary btn-block">Iniciar Missão</button>
               </div>
-              <button class="btn btn-primary btn-block">Iniciar Missão</button>
             </div>
 
-            <div class="card-mission completed">
-              <div class="mission-top">
-                <span class="mission-emoji">🤸</span>
-                <div class="flex flex-col gap-1">
-                  <h3 class="mission-title">Alongamento matinal</h3>
-                  <p class="mission-desc">Desperte o corpo com alongamentos</p>
+            <!-- Missão concluída — Movimento -->
+            <div class="col-12 col-md-6">
+              <div class="card-mission completed h-100 d-flex flex-column gap-3">
+                <div class="d-flex align-items-start gap-3">
+                  <span class="mission-emoji">🤸</span>
+                  <div class="d-flex flex-column gap-1">
+                    <h3 class="mission-title">Alongamento matinal</h3>
+                    <p class="mission-desc">Desperte o corpo com alongamentos</p>
+                  </div>
+                  <i class="fa-solid fa-check mission-check-icon ms-auto"></i>
                 </div>
-                <i class="fa-solid fa-check mission-check-icon"></i>
-              </div>
-              <div class="mission-meta">
-                <div class="flex items-center gap-2">
-                  <span class="mission-time"><i class="fa-regular fa-clock"></i> 10 min</span>
-                  <span class="badge badge-primary">Movimento</span>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="mission-time"><i class="fa-regular fa-clock"></i> 10 min</span>
+                    <span class="badge badge-info">Movimento</span>
+                  </div>
+                  <span class="mission-hc"><span class="hc-icon"></span> +20 HC</span>
                 </div>
-                <span class="mission-hc"><span class="hc-icon"></span> +20 HC</span>
+                <button class="btn btn-block mission-btn-done" disabled>Concluída</button>
               </div>
-              <button class="btn btn-block mission-btn-done" disabled>Concluída</button>
             </div>
-
           </div>
         </div>
 
         <!-- Descoberta do dia -->
         <div class="descoberta-card dashboard-section">
           <span class="descoberta-icon">💡</span>
-          <div class="flex flex-col gap-2">
+          <div class="d-flex flex-column gap-2">
             <h3 class="font-bold">Descoberta do Dia</h3>
             <p class="mission-title">Você dorme melhor nos dias que caminha à tarde!</p>
             <span class="text-sm text-muted">Completou 5 caminhadas → Dormiu 7h+ em 4 noites</span>
@@ -295,21 +311,19 @@
           </div>
         </div>
 
-        <!-- Banner recompensas -->
-        <a href="recompensas.html" class="recompensas-banner dashboard-section">
-          <div class="flex items-center gap-4">
+        <!-- Banner catálogo de recompensas -->
+        <a href="recompensas.html" class="recompensas-banner dashboard-section d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-4">
             <span style="font-size: 28px">💎</span>
-            <div class="flex flex-col gap-1">
+            <div class="d-flex flex-column gap-1">
               <h3 class="recompensas-banner-title">Catálogo de Recompensas</h3>
               <p class="recompensas-banner-desc">Troque seus 1300 Health Coins por prêmios incríveis!</p>
             </div>
           </div>
           <i class="fa-solid fa-gift recompensas-banner-gift"></i>
         </a>
-
       </section>
     </main>
-
   </div>
 
   <!-- Botão flutuante inferior -->

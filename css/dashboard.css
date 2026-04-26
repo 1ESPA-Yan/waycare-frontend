@@ -28,12 +28,6 @@
   margin: 0;
 }
 
-.humor-row {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-}
-
 .humor-badge {
   display: inline-flex;
   align-items: center;
@@ -157,26 +151,10 @@
 
 /* Trilha de hoje */
 .trilha-card {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, #d4ede6 100%);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, #b8e4d4 100%);
   border: 1px solid rgba(28, 151, 112, 0.2);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.trilha-card-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--space-4);
-}
-
-.trilha-card-title-row {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
 }
 
 .trilha-card-title {
@@ -198,16 +176,15 @@
   color: var(--color-primary-dark);
 }
 
-.trilha-progress-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .trilha-progress-bar {
   height: 10px;
 }
 
+.trilha-pct {
+  color: var(--color-primary);
+}
+
+/* Slots de missão trilha diária*/
 .trilha-slots {
   display: flex;
   gap: var(--space-3);
@@ -226,13 +203,14 @@
 }
 
 .trilha-slot.completed {
-  background-color: var(--color-primary);
+  background-color: var(--color-white);
   border-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-primary);
   font-size: var(--font-size-base);
 }
 
 .trilha-slot.pending {
+  background-color: var(--color-white);
   border: 2px dashed var(--color-border);
 }
 
@@ -259,17 +237,13 @@
   color: var(--color-primary);
 }
 
-.missoes-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
+/* Cards de missão */
+.card-mission {
+  background: var(--color-surface) !important;
 }
 
-.mission-top {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  margin-bottom: var(--space-3);
+.card-mission.completed {
+  background: var(--color-surface) !important;
 }
 
 .mission-emoji {
@@ -294,20 +268,12 @@
   color: var(--color-primary);
   font-size: var(--font-size-base);
   flex-shrink: 0;
-  margin-left: auto;
-}
-
-.mission-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--space-3);
 }
 
 .mission-time {
   font-size: var(--font-size-xs);
   color: var(--color-text-muted);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--space-1);
 }
@@ -319,17 +285,6 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-hc);
-}
-
-.mission-progress-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--space-2);
-}
-
-.card-mission .progress-bar {
-  margin-bottom: var(--space-3);
 }
 
 .mission-btn-done {
@@ -372,10 +327,7 @@
 
 /* Banner recompensas */
 .recompensas-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  background: linear-gradient(90deg, #157a59 0%, #1c9770 50%, #2db88a 100%);
   border-radius: var(--radius-lg);
   padding: var(--space-6) var(--space-8);
   text-decoration: none;
@@ -395,7 +347,7 @@
 
 .recompensas-banner-desc {
   font-size: var(--font-size-sm);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   margin: 0;
 }
 
@@ -406,7 +358,7 @@
 
 /* Card especial — missão da WayCare Bottle */
 .card-mission.bottle-mission {
-  background: linear-gradient(135deg, #eef6ff 0%, #daeeff 100%);
+  background: linear-gradient(135deg, #daeeff 0%, #c0e2fa 100%) !important;
   border-color: #a8d4f5;
 }
 
@@ -414,23 +366,27 @@
   border-color: #4aaee8;
 }
 
+/* Badge da garrafa */
 .bottle-mission-badge {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-1);
-  background-color: #1a7fc4;
+  gap: var(--space-2);
+  background-color: #1565a8;
   color: var(--color-white);
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  padding: 3px var(--space-3);
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-full);
-  margin-bottom: var(--space-3);
+  letter-spacing: 0.02em;
+}
+
+.bottle-mission-badge i {
+  color: #7dd4f8;
 }
 
 .bottle-mission-progress-label {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
-  margin-bottom: var(--space-1);
 }
 
 .bottle-mission-progress-pct {
@@ -439,7 +395,8 @@
   color: var(--color-text-muted);
 }
 
-.card-mission.bottle-mission .progress-fill {
+/* Barra de progresso da garrafa */
+.bottle-progress-fill {
   background-color: #4aaee8;
 }
 
@@ -461,23 +418,25 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .missoes-grid {
-    grid-template-columns: 1fr;
+  .dashboard-topbar {
+    flex-direction: column;
+    gap: var(--space-3);
   }
 
-  .trilha-card-header {
-    flex-direction: column;
+  .trilha-card-title {
+    font-size: var(--font-size-sm);
+  }
+
+  .trilha-slots {
     gap: var(--space-2);
+  }
+
+  .trilha-slot {
+    height: 48px;
   }
 
   .recompensas-banner {
     padding: var(--space-4) var(--space-5);
-  }
-}
-
-@media (max-width: 480px) {
-  .trilha-slot {
-    height: 48px;
   }
 
   .recompensas-banner-gift {
