@@ -220,6 +220,20 @@
   color: #4aaee8;
 }
 
+/* Badges de Dificuldade */
+
+.badge-facil {
+  background-color: var(--color-primary-light); color: var(--color-primary);
+}
+
+.badge-medio {
+  background-color: #fff3e0; color: #e65100;
+}
+
+.badge-dificil {
+  background-color: #ffebee; color: var(--color-error);
+}
+
 /* Cores da trilha azul */
 .trilha-pct--blue   { color: #4aaee8; }
 .trilha-fill--blue  { background-color: #4aaee8; }
