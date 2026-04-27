@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WayCare — Trilhas</title>
+  <title>WayCare — Configurações</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="../css/global.css" />
-  <link rel="stylesheet" href="../css/trilhas.css" />
+  <link rel="stylesheet" href="../css/configuracoes.css" />
 </head>
 
 <body>
@@ -64,10 +67,13 @@
 
     <main class="main-content" id="main-content">
       <header class="topbar">
-        <h1>Configurações</h1>
+        <a href="perfil.html" class="config-voltar">
+          <i class="fa-solid fa-arrow-left"></i>
+          Voltar
+        </a>
         <div class="topbar-actions">
           <div class="hc-chip">
-            <span class="hc-icon"></span>
+            <i class="fa-solid fa-coins"></i>
             1300 HC
           </div>
           <button class="notif-btn" aria-label="Notificações">
@@ -78,10 +84,149 @@
       </header>
 
       <section id="page-content">
-        <!-- Todo conteúdo das configurações vai vir aqui -->
+        <!-- Título da página -->
+        <div class="d-flex align-items-center gap-3 mb-5">
+          <div class="config-titulo-icon">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <h1 class="config-titulo">Configurações</h1>
+        </div>
+
+        <!-- Informações da Conta -->
+        <div class="card config-section mb-4">
+          <h2 class="config-section-titulo mb-4">Informações da Conta</h2>
+          <div class="config-row">
+            <div class="config-row-info">
+              <span class="config-row-label">Nome</span>
+              <span class="config-row-valor">João Victor</span>
+            </div>
+            <a href="#" class="config-row-action">Editar</a>
+          </div>
+
+          <div class="config-divider"></div>
+
+          <div class="config-row">
+            <div class="config-row-info">
+              <span class="config-row-label">E-mail</span>
+              <span class="config-row-valor">joao.victor@email.com</span>
+            </div>
+            <a href="#" class="config-row-action">Editar</a>
+          </div>
+
+          <div class="config-divider"></div>
+
+          <div class="config-row">
+            <div class="config-row-info">
+              <span class="config-row-label">Senha</span>
+              <span class="config-row-valor config-senha">••••••••</span>
+            </div>
+            <a href="#" class="config-row-action">Alterar</a>
+          </div>
+        </div>
+
+        <!-- Notificações -->
+        <div class="card config-item-card mb-4">
+          <div class="d-flex align-items-center gap-4">
+            <div class="config-item-icon config-item-icon--green">
+              <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="d-flex flex-column gap-1 flex-grow-1">
+              <span class="config-item-titulo">Notificações</span>
+              <span class="config-item-desc">Gerencie suas preferências de notificação</span>
+            </div>
+            <a href="#" class="config-row-action config-row-action--arrow">Configurar →</a>
+          </div>
+        </div>
+
+        <!-- Privacidade e Dados -->
+        <div class="card config-item-card mb-4">
+          <div class="d-flex align-items-center gap-4">
+            <div class="config-item-icon config-item-icon--blue">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="d-flex flex-column gap-1 flex-grow-1">
+              <span class="config-item-titulo">Privacidade e Dados</span>
+              <span class="config-item-desc">Controle seus dados e privacidade</span>
+            </div>
+            <a href="#" class="config-row-action config-row-action--arrow">Gerenciar →</a>
+          </div>
+        </div>
+
+        <!-- Aparência -->
+        <div class="card config-item-card mb-4">
+          <div class="d-flex align-items-center gap-4">
+            <div class="config-item-icon config-item-icon--orange">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <div class="d-flex flex-column gap-1 flex-grow-1">
+              <span class="config-item-titulo">Aparência</span>
+              <span class="config-item-desc">Personalize cores e tema</span>
+            </div>
+            <a href="#" class="config-row-action config-row-action--arrow">Personalizar →</a>
+          </div>
+        </div>
+
+        <!-- Zona de Perigo -->
+        <div class="card config-section mb-4">
+          <h2 class="config-section-titulo mb-4">Zona de Perigo</h2>
+
+          <!-- Sair da Conta -->
+          <div class="config-perigo-item config-perigo-item--warning">
+            <div class="d-flex align-items-center gap-3 flex-grow-1">
+              <i class="fa-solid fa-arrow-right-from-bracket config-perigo-icon config-perigo-icon--warning"></i>
+              <div class="d-flex flex-column gap-1">
+                <span class="config-perigo-titulo">Sair da Conta</span>
+                <span class="config-perigo-desc">Você pode voltar a qualquer momento</span>
+              </div>
+            </div>
+            <a href="login.html" class="config-perigo-action config-perigo-action--warning">Sair →</a>
+          </div>
+
+          <!-- Excluir Conta -->
+          <div class="config-perigo-item config-perigo-item--error mt-3">
+            <div class="d-flex align-items-center gap-3 flex-grow-1">
+              <i class="fa-solid fa-shield-halved config-perigo-icon config-perigo-icon--error"></i>
+              <div class="d-flex flex-column gap-1">
+                <span class="config-perigo-titulo">Excluir Conta</span>
+                <span class="config-perigo-desc">Esta ação não pode ser desfeita</span>
+              </div>
+            </div>
+            <a href="#" class="config-perigo-action config-perigo-action--error">Excluir →</a>
+          </div>
+        </div>
+
+        <!-- Sobre -->
+        <div class="card config-section">
+          <h2 class="config-section-titulo mb-4">Sobre</h2>
+
+          <div class="config-row">
+            <span class="config-row-label">Versão</span>
+            <span class="config-row-valor">1.0.0</span>
+          </div>
+
+          <div class="config-divider"></div>
+
+          <div class="config-row">
+            <span class="config-row-label">Termos de Uso</span>
+            <a href="#" class="config-row-action">Ver →</a>
+          </div>
+
+          <div class="config-divider"></div>
+
+          <div class="config-row">
+            <span class="config-row-label">Política de Privacidade</span>
+            <a href="#" class="config-row-action">Ver →</a>
+          </div>
+
+          <div class="config-divider"></div>
+
+          <div class="config-row">
+            <span class="config-row-label">Suporte</span>
+            <a href="#" class="config-row-action">Contato →</a>
+          </div>
+        </div>
       </section>
     </main>
-
   </div>
 
   <button class="fab" aria-label="Ações rápidas">
@@ -90,4 +235,4 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html> 
