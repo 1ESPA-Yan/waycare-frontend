@@ -53,103 +53,9 @@
   color: var(--color-primary);
 }
 
-/* Widget Bottle na sidebar */
-.bottle-widget {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  margin: var(--space-3) var(--space-4);
-  padding: var(--space-4);
-  background-color: #0f1f2e;
-  border-radius: var(--radius-md);
-  text-decoration: none;
-  transition: opacity var(--transition-fast);
-}
+/* Widget WayCare Bottle — estilos movidos para global.css */
 
-.bottle-widget:hover {
-  opacity: 0.9;
-}
-
-.bottle-widget-header {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.bottle-widget-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: var(--radius-sm);
-  background-color: rgba(122, 209, 195, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-accent-2);
-  font-size: 12px;
-  flex-shrink: 0;
-}
-
-.bottle-widget-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.bottle-widget-title {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-white);
-  line-height: 1;
-}
-
-.bottle-widget-status {
-  display: flex;
-  align-items: center;
-  gap: var(--space-1);
-  font-size: var(--font-size-xs);
-  color: var(--color-accent-2);
-}
-
-.bottle-status-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--color-accent-2);
-}
-
-.bottle-widget-progress-row {
-  display: flex;
-  align-items: baseline;
-  gap: var(--space-1);
-}
-
-.bottle-widget-ml {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-white);
-}
-
-.bottle-widget-meta {
-  font-size: var(--font-size-xs);
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.bottle-widget .progress-bar {
-  height: 4px;
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-.bottle-widget .progress-fill {
-  background-color: var(--color-accent-2);
-}
-
-.bottle-widget-pct {
-  font-size: var(--font-size-xs);
-  color: rgba(255, 255, 255, 0.5);
-  text-align: right;
-}
-
-/* Trilha de hoje */
+/* Trilha de hoje — gradiente verde no card principal */
 .trilha-card {
   background: linear-gradient(135deg, var(--color-primary-light) 0%, #b8e4d4 100%);
   border: 1px solid rgba(28, 151, 112, 0.2);
@@ -184,7 +90,7 @@
   color: var(--color-primary);
 }
 
-/* Slots de missão trilha diária*/
+/* Slots de missão — fundo branco para todos */
 .trilha-slots {
   display: flex;
   gap: var(--space-3);
@@ -237,12 +143,12 @@
   color: var(--color-primary);
 }
 
-/* Botões dentro dos cards de missão */
+/* Botões dentro dos cards de missão — bordas menos arredondadas */
 .btn-mission {
   border-radius: var(--radius-md);
 }
 
-/* Cards de missão */
+/* Cards de missão — fundo branco simples */
 .card-mission {
   background: var(--color-surface) !important;
 }
@@ -364,7 +270,7 @@
   color: var(--color-primary-dark);
 }
 
-/* Banner recompensas */
+/* Banner catálogo de recompensas — gradiente esquerda para direita */
 .recompensas-banner {
   background: linear-gradient(90deg, #157a59 0%, #1c9770 50%, #2db88a 100%);
   border-radius: var(--radius-lg);
@@ -410,7 +316,7 @@
   border-color: #4aaee8;
 }
 
-/* Badge da garrafa */
+/* Badge da garrafa — estilo mais escuro e contrastado */
 .bottle-mission-badge {
   display: inline-flex;
   align-items: center;

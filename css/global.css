@@ -1,7 +1,7 @@
 /* WAYCARE — Global CSS
    Design System: variáveis, reset, tipografia e componentes */
 
-/* VARIÁVEIS (Design System) */
+/* 1. VARIÁVEIS (Design System) */
 :root {
   /* Cores principais */
   --color-primary: #1c9770;
@@ -393,6 +393,85 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-hc);
+}
+
+
+/* Widget WayCare Bottle — sidebar (compartilhado entre todas as páginas) */
+.bottle-sidebar-widget {
+  margin: var(--space-3) var(--space-4);
+  padding: var(--space-4);
+  background-color: #033054;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  display: block;
+  transition: opacity var(--transition-fast);
+}
+
+.bottle-sidebar-widget:hover {
+  opacity: 0.9;
+}
+
+.bottle-widget-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(33, 150, 243, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-info);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.bottle-widget-title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  line-height: 1;
+}
+
+.bottle-widget-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  color: var(--color-info);
+}
+
+.bottle-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-info);
+}
+
+.bottle-widget-ml {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
+
+.bottle-widget-meta {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bottle-widget-bar {
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.bottle-widget-fill {
+  background-color: var(--color-info);
+}
+
+.bottle-widget-pct {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.5);
+  text-align: right;
+  display: block;
+  margin-top: var(--space-1);
 }
 
 /* Inputs */

@@ -54,76 +54,7 @@
   gap: var(--space-1);
 }
 
-/* Widget sidebar da bottle */
-.bottle-sidebar-widget {
-  margin: var(--space-3) var(--space-4);
-  padding: var(--space-4);
-  background-color: #033054;
-  border-radius: var(--radius-md);
-}
-
-.bottle-widget-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: var(--radius-sm);
-  background-color: rgba(33, 150, 243, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-info);
-  font-size: 12px;
-  flex-shrink: 0;
-}
-
-.bottle-widget-title {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-white);
-  line-height: 1;
-}
-
-.bottle-widget-status {
-  display: flex;
-  align-items: center;
-  gap: var(--space-1);
-  font-size: var(--font-size-xs);
-  color: var(--color-info);
-}
-
-.bottle-status-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--color-info);
-}
-
-.bottle-widget-ml {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-white);
-}
-
-.bottle-widget-meta {
-  font-size: var(--font-size-xs);
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.bottle-widget-bar {
-  height: 4px;
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-.bottle-widget-fill {
-  background-color: var(--color-info);
-}
-
-.bottle-widget-pct {
-  font-size: var(--font-size-xs);
-  color: rgba(255, 255, 255, 0.5);
-  text-align: right;
-  display: block;
-  margin-top: var(--space-1);
-}
+/* Widget sidebar — estilos movidos para global.css */
 
 /* Cards de resumo */
 .bottle-resumo-card {
@@ -166,7 +97,7 @@
   display: block;
 }
 
-/* Painel principal */
+/* Painel dark principal */
 .bottle-painel {
   background-color: #033054;
   border-radius: var(--radius-lg);
@@ -204,7 +135,7 @@
   align-items: center;
   gap: var(--space-1);
   background-color: rgba(33, 150, 243, 0.15);
-  color: var(--color-white);
+  color: var(--color-info);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   padding: 3px var(--space-3);
@@ -212,7 +143,7 @@
   letter-spacing: 0.06em;
 }
 
-/* Ponto da badge LIVE */
+/* Ponto LIVE piscando — animação virá no React */
 .bottle-live-dot {
   width: 6px;
   height: 6px;
@@ -241,7 +172,7 @@
   letter-spacing: 0.08em;
 }
 
-/* Ilustração da garrafa */
+/* Ilustração da garrafa — estática (animação no React) */
 .bottle-visual-wrap {
   display: flex;
   flex-direction: column;
@@ -275,7 +206,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: height var(--transition-slow);
+  transition: height 0.4s ease;
 }
 
 .bottle-visual-pct {
@@ -452,7 +383,7 @@
   margin-bottom: 0;
 }
 
-/* Card de Histórico semanal */
+/* Histórico semanal card */
 .bottle-historico-card {
   padding: var(--space-6);
 }
@@ -653,7 +584,7 @@
   color: var(--color-text-primary);
 }
 
-/* Meta de hidratação (card de progresso) */
+/* Meta de hidratação — card de progresso */
 .bottle-meta-card {
   background-color: var(--color-primary-light);
   border-radius: var(--radius-md);
