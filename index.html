@@ -1,35 +1,227 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="WayCare — Transforme sua saúde em uma jornada personalizada e recompensadora." />
-    <title>WayCare — Bem-vindo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WayCare — Bem-vindo</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/onboarding.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/onboarding.css" />
 </head>
 
-<body>
-    <main id="onboarding-root">
-        
-    </main>
+<body class="onboarding-body">
+  <div class="onboarding-layout">
+    <!-- Cabeçalho -->
+    <header class="onboarding-header">
+      <div class="onboarding-logo">
+        <div class="onboarding-logo-icon">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <span class="onboarding-logo-name">WayCare</span>
+      </div>
+      <div class="onboarding-dots">
+        <span class="onboarding-dot active" id="dot-1"></span>
+        <span class="onboarding-dot" id="dot-2"></span>
+        <span class="onboarding-dot" id="dot-3"></span>
+      </div>
+    </header>
 
-    <!-- botão flutuante inferior -->
-    <button class="fab" aria-label="Menu de opções">
-        <i class="fa-solid fa-bars"></i>
-    </button>
+    <!-- Área Principal -->
+    <div class="onboarding-steps-area">
+      <!-- Tela 1 — Boas-vindas -->
+      <section class="onboarding-step active" id="step-1">
+        <div class="onboarding-card-wrapper">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+          <div class="onboarding-icons-row">
+            <div class="onboarding-icon-bubble onboarding-icon-bubble--red">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <div class="onboarding-icon-bubble onboarding-icon-bubble--green onboarding-icon-bubble--lg">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div class="onboarding-icon-bubble onboarding-icon-bubble--yellow">
+              <i class="fa-solid fa-face-smile"></i>
+            </div>
+          </div>
+
+          <h1 class="onboarding-titulo">Bem-vindo ao WayCare</h1>
+          <p class="onboarding-subtitulo">
+            Transforme sua saúde em uma jornada personalizada e recompensadora
+          </p>
+
+          <ul class="onboarding-features">
+            <li>
+              <div class="onboarding-feature-icon">
+                <i class="fa-solid fa-route"></i>
+              </div>
+              <span>Trilhas personalizadas pela sua <strong>WayCare Band</strong></span>
+            </li>
+            <li>
+              <div class="onboarding-feature-icon">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <span>Micro-hábitos simples e realizáveis</span>
+            </li>
+            <li>
+              <div class="onboarding-feature-icon">
+                <i class="fa-solid fa-coins"></i>
+              </div>
+              <span>Recompensas por cada conquista</span>
+            </li>
+          </ul>
+
+          <button class="btn onboarding-btn-primary" onclick="irParaStep(2)">
+            Começar
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <div class="onboarding-login-link">
+            <span>Já tem conta?</span>
+            <a href="pages/login.html" class="auth-link auth-link-bold">
+              Entrar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tela 2 — Como Funciona -->
+      <section class="onboarding-step" id="step-2">
+        <div class="onboarding-card-wrapper">
+          <h1 class="onboarding-titulo">Como Funciona</h1>
+          <p class="onboarding-subtitulo">
+            Todos os dias, sua WayCare Band monitora seus dados e criamos uma trilha
+            personalizada com micro-hábitos. Complete missões, ganhe Health Coins
+            e troque por recompensas reais!
+          </p>
+
+          <!-- cards lado a lado -->
+          <div class="onboarding-how-cards">
+            <div class="onboarding-how-card">
+              <div class="onboarding-how-num">1</div>
+              <div class="onboarding-how-icon onboarding-how-icon--purple">
+                <i class="fa-solid fa-heart-circle-check"></i>
+              </div>
+              <h3 class="onboarding-how-titulo">Sua WayCare Band</h3>
+              <p class="onboarding-how-desc">Monitora seus dados de saúde em tempo real</p>
+            </div>
+
+            <div class="onboarding-how-card">
+              <div class="onboarding-how-num">2</div>
+              <div class="onboarding-how-icon onboarding-how-icon--green">
+                <i class="fa-solid fa-route"></i>
+              </div>
+              <h3 class="onboarding-how-titulo">Trilha Diária</h3>
+              <p class="onboarding-how-desc">Receba missões personalizadas para o seu dia</p>
+            </div>
+
+            <div class="onboarding-how-card">
+              <div class="onboarding-how-num">3</div>
+              <div class="onboarding-how-icon onboarding-how-icon--yellow">
+                <i class="fa-solid fa-coins"></i>
+              </div>
+              <h3 class="onboarding-how-titulo">Health Coins</h3>
+              <p class="onboarding-how-desc">Ganhe pontos e troque por prêmios exclusivos</p>
+            </div>
+          </div>
+
+          <div class="onboarding-btn-row">
+            <button class="btn onboarding-btn-ghost" onclick="irParaStep(1)">
+              <i class="fa-solid fa-arrow-left"></i>
+              Voltar
+            </button>
+            <button class="btn onboarding-btn-primary" onclick="irParaStep(3)">
+              Continuar
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tela 3 — LGPD -->
+      <section class="onboarding-step" id="step-3">
+        <div class="onboarding-card-wrapper">
+          <div class="onboarding-lgpd-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+
+          <h1 class="onboarding-titulo">Privacidade e Dados</h1>
+          <p class="onboarding-subtitulo">Como Usamos Seus Dados</p>
+
+          <ul class="onboarding-lgpd-lista">
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Coletamos apenas dados necessários para personalizar sua experiência
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Você tem controle total sobre suas informações
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Seus dados de saúde são criptografados e seguros (LGPD)
+            </li>
+          </ul>
+
+          <div class="onboarding-lgpd-box">
+            <p class="onboarding-lgpd-box-titulo">Para personalizar sua experiência, coletamos:</p>
+            <ul class="onboarding-lgpd-coleta">
+              <li><i class="fa-solid fa-check"></i> Dados da WayCare Band (com sua autorização)</li>
+              <li><i class="fa-solid fa-check"></i> Progresso em missões</li>
+              <li><i class="fa-solid fa-check"></i> Dados de saúde (com sua autorização)</li>
+            </ul>
+            <p class="onboarding-lgpd-nota">
+              Você pode revisar, exportar ou excluir seus dados a qualquer momento em "Meus Dados".
+            </p>
+          </div>
+
+          <div class="onboarding-checkboxes">
+            <label class="checkbox-group">
+              <input type="checkbox" id="aceite-termos" />
+              <span class="text-sm">Aceito os <a href="#" class="auth-link">Termos de Uso</a></span>
+            </label>
+            <label class="checkbox-group">
+              <input type="checkbox" id="aceite-privacidade" />
+              <span class="text-sm">Concordo com a <a href="#" class="auth-link">Política de Privacidade</a></span>
+            </label>
+            <label class="checkbox-group">
+              <input type="checkbox" id="aceite-dados" />
+              <span class="text-sm">Autorizo o uso de dados para personalização</span>
+            </label>
+          </div>
+
+          <a href="#" class="auth-link text-sm onboarding-politica-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            Ler política completa
+          </a>
+
+          <!-- 3 botões lado a lado -->
+          <div class="onboarding-btn-row">
+            <button class="btn onboarding-btn-ghost" onclick="irParaStep(2)">
+              <i class="fa-solid fa-arrow-left"></i>
+              Voltar
+            </button>
+            <button class="btn onboarding-btn-primary" id="btn-aceitar" disabled
+              onclick="window.location.href='pages/dashboard.html'">
+              Aceitar e Continuar
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button class="btn onboarding-btn-recusar" onclick="irParaStep(1)">
+              Recusar
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/onboarding.js"></script>
 </body>
 </html>
