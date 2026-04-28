@@ -740,36 +740,6 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
   border: 2px solid var(--color-white);
 }
 
-/* Botão Flutuante inferior */
-.fab {
-  position: fixed;
-  bottom: var(--space-6);
-  right: var(--space-6);
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-lg);
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  z-index: 200;
-  border: none;
-}
-
-.fab i {
-  font-size: 22px;
-  font-weight: var(--font-weight-bold);
-}
-
-.fab:hover {
-  background-color: var(--color-primary-dark);
-  transform: scale(1.08);
-}
-
 /* Alerta - Card de Descoberta */
 .alert {
   border-radius: var(--radius-lg);
