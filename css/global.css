@@ -792,6 +792,32 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
 
 /* RESPONSIVIDADE */
 
+/* Botão hamburguer — só aparece no mobile */
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 200;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: flex;
+  }
+}
+
 @media (max-width: 1024px) {
   :root { --sidebar-width: 200px; }
   .main-content { padding: var(--space-6); }
