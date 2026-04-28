@@ -87,9 +87,9 @@
 }
 
 /* Badges de impacto */
-.descoberta-badge--alto  { background-color: #fff8ec; color: var(--color-hc); border-radius: var(--radius-sm); }
-.descoberta-badge--medio { background-color: #fff3e0; color: #e65100;         border-radius: var(--radius-sm); }
-.descoberta-badge--baixo { background-color: var(--color-bg); color: var(--color-text-muted); border-radius: var(--radius-sm); }
+.descoberta-badge--alto  { background-color: #ffebee; color: var(--color-error); }
+.descoberta-badge--medio { background-color: #fff3e0; color: #e65100; }
+.descoberta-badge--baixo { background-color: var(--color-primary-light); color: var(--color-primary); }
 
 /* Box de insight */
 .descoberta-insight {
