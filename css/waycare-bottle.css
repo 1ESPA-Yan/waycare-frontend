@@ -506,15 +506,6 @@
   font-weight: var(--font-weight-bold);
 }
 
-.bottle-chart-aviso {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-muted);
-  display: flex;
-  align-items: center;
-  gap: var(--space-1);
-  margin: var(--space-3) 0 0;
-}
-
 /* Coluna direita */
 .bottle-col-titulo {
   font-size: var(--font-size-base);

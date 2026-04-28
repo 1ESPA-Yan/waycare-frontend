@@ -149,15 +149,6 @@
   justify-content: center;
 }
 
-.recompensa-hc .hc-icon {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: var(--color-primary);
-  display: inline-block;
-  flex-shrink: 0;
-}
-
 /* Botão resgatar */
 .recompensa-btn {
   background-color: var(--color-primary);

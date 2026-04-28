@@ -69,6 +69,9 @@
   display: block;
 }
 
+.resumo-valor--hc { 
+  color: var(--color-hc); }
+
 /* Busca e filtros */
 .trilhas-search {
   position: relative;

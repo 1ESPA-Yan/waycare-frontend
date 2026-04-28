@@ -32,18 +32,6 @@
   gap: var(--space-3);
 }
 
-.onboarding-logo-icon {
-  width: 40px;
-  height: 40px;
-  background-color: var(--color-primary);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-white);
-  font-size: 18px;
-}
-
 .onboarding-logo-name {
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);

@@ -377,14 +377,6 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
   border-radius: var(--radius-full);
 }
 
-.hc-chip .hc-icon {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: var(--color-hc);
-  display: inline-block;
-}
-
 /* Health Coins em cards de missão, trilhas e conquistas */
 .mission-hc {
   display: inline-flex;
@@ -394,7 +386,6 @@ p  { line-height: var(--line-height-base); color: var(--color-text-secondary); }
   font-weight: var(--font-weight-bold);
   color: var(--color-hc);
 }
-
 
 /* Widget WayCare Bottle — sidebar (compartilhado entre todas as páginas) */
 .bottle-sidebar-widget {
