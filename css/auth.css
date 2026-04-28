@@ -55,6 +55,8 @@
   gap: var(--space-3);
   position: relative;
   z-index: 1;
+  align-items: center;
+  filter: brightness(0) invert(1);
 }
 
 .auth-logo-icon {
